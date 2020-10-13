@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EL Hiperión | Bistro</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <figure>Logo</figure>
+            <h3>EL Hiperión | Bistro</h3>
+        </div>
+        <nav>
+            <a href="">INICIO</a>
+            <a href="">PROMOCIONES</a>
+            <a href="">PRODUCTOS</a>
+            <a href="">CONTACTANOS</a>
+        </nav>
+        <div>
+            <figure>LogoCarrito</figure>
+            <h4>$0.00</h4>
+        </div>
+    </header>
+    <main>
+        <section id="home-section">
+            <img src="img/hyperion.jpg" alt="El Hiperion">
+            <div>
+                <h1>EL HIPERIÓN | BISTRO</h1>
+                <h2>Productos fuera de este mundo</h2>
+                <p>
+                    Transportate a una nueva experiencia gourmet en El Hiperion|Bistro, donde
+                    te ofrecemos una gran cantidad de productos con gustos y sabores fuera de
+                    este mundo para deleitar tu paladar.
+                </p>
+                <p>
+                    Disfruta de nuestros Alimentos preparados
+                    bajo los mejores procesos y con los mejores ingredientes.
+                    Deleitate con nuestra diversidad de Bebidas y sella tu visita con los mejores
+                    Postres de todo el sector; todo a excelentes precios.
+                </p>
+                <p>
+                    Revisa nuestras Promociones, ¡Será un placer atenderte!
+                </p>
+            </div>
+        </section>
+        <section id="promo-section">
+            <h2>Promociones</h2>
+            <p>Elija entre nuestros fabulosos Combos en Promoción</p>
+            <div>
+                <figure>
+                    <img src="img/promocion.jpg" alt="promocion">
+                    <figcaption>
+                        <h4>NOMBRE</h4>
+                        <p>Descripcion</p>
+                        <p><span>Precio</span></p>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="img/promocion.jpg" alt="promocion">
+                    <figcaption>
+                        <h4>NOMBRE</h4>
+                        <p>Descripcion</p>
+                        <p><span>Precio</span></p>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="img/promocion.jpg" alt="promocion">
+                    <figcaption>
+                        <h4>NOMBRE</h4>
+                        <p>Descripcion</p>
+                        <p><span>Precio</span></p>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <section id="products-section">
+            <h2>Nuestros Productos</h2>
+            <p>Consulte nuestros Catálogos y elija entre la variedad de Productos</p>
+            <div>Ver Catálogo de Comidas</div>
+            <div>Ver Catálogo de Bebidas</div>
+            <div>Ver Catálogo de Postres</div>
+        </section>
+        <section id="contactus-section">
+            <article>
+                <h2>Contáctenos</h2>
+                <p>Sugerencias, Comentarios</p>
+
+                <p>En El Hiperión|Bistro nuestra tripulación está empeñada en
+                    atenderle cada vez de una mejor manera. Sus comentarios nos ayudan a mejorar y
+                    permiten nuestro crecimiento.
+                </p>
+                <p>¿Alguna Sugerencia? ¿Le gustaría opinar acerca de nuevos productos?
+                    No dude en comentarnos, y será un placer considerar sus ideas.
+                </p>
+                <p>¿Es siempre un gusto atenderle!</p>
+            </article>
+            <div>
+                <h2>Ingrese sus datos y envíenos sus comentarios</h2>
+                <!--No usar labels, se vera mejor-->
+                <form action="">
+                    <input type="text" id="user-name" placeholder="Nombre Completo:">
+                    <input type="email" id="user-email" placeholder="Correo Electrónico">
+                    <textarea id="user-comments" cols="30" rows="10">Sugerencia o Comentario</textarea>
+            </div>
+            </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <h3>SIGUENOS</h3>
+            <figure>tw</figure>
+            <figure>fb</figure>
+            <figure>ig</figure>
+        </div>
+        <div>
+            <p>El Hiperión | Bistro</p>
+        </div>
+    </footer>
+
+    <!--Modals-->
+    <div>
+        <div class="blackBackground"></div>
+        <article>
+            <h2>Promoción o Producto</h2>
+            <figure>
+                <img src="img/some-product.jpg" alt="producto">
+            </figure>
+            <div>
+                <h3>Nombre Promocion o Producto</h3>
+                <p>Descripcion</p>
+                <p>Lista de Propiedades del Producto</p>
+                <p>Precio 0.00</p>
+
+                <div>
+                    <!--Cantidad div-->
+                    <button>-</button>
+                    <input type="text" value="0" disabled>
+                    <button>+</button>
+                </div>
+                <button type="button">Agregar al Carrito</button>
+            </div>
+        </article>
+    </div>
+
+    <!--Alert-->
+    <div>
+        <figure>
+            LogoError
+        </figure>
+        <p>Parrafo de Error Personalizable</p>
+    </div>
+
+    <!--Alert-->
+    <div>
+        <figure>
+            LogoExito
+        </figure>
+        <p>¡Agregado Correctamente!</p>
+    </div>
+
+    <!--Carrito-->
+    <article>
+        <h3>Mis Productos</h3>
+        <p>Click en Continuar para proceder con la compra</p>
+        <div>
+            <p>Aqui van los productos que se van agregando al Carrito</p>
+        </div>
+        <button>Continuar</button>
+    </article>
+
+    <!--Final-Modal-->
+    <section>
+        <h2>¡Ingresa tus Datos!</h2>
+        <div>
+            <p>Espacio para el arreglo de orden (objeto)</p>
+        </div>
+        <div>
+            <form action="">
+                <input type="text" id="" placeholder="Nombre Completo*">
+                <input type="tel" id="" pattern="[0-9]{4}-[0-9]{4}" placeholder="Número de Teléfono*">
+                <input type="email" id="" placeholder="Correo Electronico">
+                <label for="">Entrega en:</label>
+                <div>
+                    <label for="restaurant-delivery">Restaurante</label>
+                    <input type="radio" name="delivery" value="restaurant" id="restaurant-delivery">
+                    <label for="home-delivery">Domicilio</label>
+                    <input type="radio" name="delivery" value="home" id="home-delivery" checked>
+                </div>
+                <input type="text" id="" placeholder="Dirección Exacta">
+                <select id="delivery-time">
+                    <option value="0">Seleccione Hora Aproximada de Recibir Orden</option>
+                    <option value="1">1 hora</option>
+                    <option value="2">2 hora</option>
+                    <option value="3">3 hora</option>
+                    <option value="4">4 hora</option>
+                </select>
+                <label>Método de Pago:</label>
+                <div>
+                    <label for="card-method">Tarjeta de Crédito o Débito</label>
+                    <input type="radio" name="payment" value="card" id="card-method">
+                    <label for="cash-method">Efectivo (Al momento de la Entrega)</label>
+                    <input type="radio" name="payment" value="cash" id="cash-method" checked>
+                </div>
+                <input type="text" id="" placeholder="Tarjeta de Crédito o Débito">
+                <div>
+                    <button type="reset">Atrás</button>
+                    <button type="submit">Confirmar Compra</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!--Confirmation-Modal-->
+    <div>
+        <h2>¡Orden realizada con Éxito!</h2>
+        <p>Hora de la Orden: <span>3horas</span></p>
+        <p>Tiempo Estimado de entrega: <span>Tiempo 30min</span></p>
+    </div>
+
+</body>
+</html>
