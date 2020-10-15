@@ -4,29 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EL Hiperión | Bistro</title>
+    <title>EL Hiperión|Bistro</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <div>
-            <figure>Logo</figure>
+    <header class="flex full-width">
+        <div id="logo-div">
             <h3>EL Hiperión | Bistro</h3>
         </div>
-        <nav>
+        <nav id="main-navbar" class="flex">
             <a href="">INICIO</a>
             <a href="">PROMOCIONES</a>
             <a href="">PRODUCTOS</a>
             <a href="">CONTACTANOS</a>
         </nav>
-        <div>
-            <figure>LogoCarrito</figure>
+        <div id="total-div" class="flex">
             <h4>$0.00</h4>
         </div>
     </header>
-    <main>
-        <section id="home-section">
-            <img src="img/hyperion.jpg" alt="El Hiperion">
+    <main class="flex full-width">
+        <section id="home-section" class="flex full-width">
             <div>
                 <h1>EL HIPERIÓN | BISTRO</h1>
                 <h2>Productos fuera de este mundo</h2>
@@ -46,10 +44,10 @@
                 </p>
             </div>
         </section>
-        <section id="promo-section">
-            <h2>Promociones</h2>
-            <p>Elija entre nuestros fabulosos Combos en Promoción</p>
-            <div>
+        <section id="promo-section" class="flex full-width">
+            <h2 class="full-width">Promociones</h2>
+            <p class="full-width">Elija entre nuestros fabulosos Combos en Promoción</p>
+            <div class="flex full-width">
                 <figure>
                     <img src="img/promocion.jpg" alt="promocion">
                     <figcaption>
@@ -78,26 +76,26 @@
                 </figure>
             </div>
         </section>
-        <section id="products-section">
-            <h2>Nuestros Productos</h2>
-            <p>Consulte nuestros Catálogos y elija entre la variedad de Productos</p>
-            <div>Ver Catálogo de Comidas</div>
-            <div>Ver Catálogo de Bebidas</div>
-            <div>Ver Catálogo de Postres</div>
+        <section id="products-section" class="flex full-width">
+            <h2 class="full-width">Nuestros Productos</h2>
+            <p class="full-width">Consulte nuestros Catálogos y elija entre la variedad de Productos</p>
+            <div class="flex full-width">Ver Catálogo de Comidas</div>
+            <div class="flex full-width">Ver Catálogo de Bebidas</div>
+            <div class="flex full-width">Ver Catálogo de Postres</div>
         </section>
-        <section id="contactus-section">
+        <section id="contactus-section" class="flex full-width">
             <article>
-                <h2>Contáctenos</h2>
-                <p>Sugerencias, Comentarios</p>
+                <h2 class="full-width">Contáctenos</h2>
+                <p class="full-width">Sugerencias, Comentarios</p>
 
-                <p>En El Hiperión|Bistro nuestra tripulación está empeñada en
+                <p class="full-width">En El Hiperión|Bistro nuestra tripulación está empeñada en
                     atenderle cada vez de una mejor manera. Sus comentarios nos ayudan a mejorar y
                     permiten nuestro crecimiento.
                 </p>
-                <p>¿Alguna Sugerencia? ¿Le gustaría opinar acerca de nuevos productos?
+                <p class="full-width">¿Alguna Sugerencia? ¿Le gustaría opinar acerca de nuevos productos?
                     No dude en comentarnos, y será un placer considerar sus ideas.
                 </p>
-                <p>¿Es siempre un gusto atenderle!</p>
+                <p class="full-width">¿Es siempre un gusto atenderle!</p>
             </article>
             <div>
                 <h2>Ingrese sus datos y envíenos sus comentarios</h2>
@@ -111,7 +109,7 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="flex full-width">
         <div>
             <h3>SIGUENOS</h3>
             <figure>tw</figure>
@@ -124,6 +122,40 @@
     </footer>
 
     <!--Modals-->
+    <!--Comidas-->
+    <div>
+        <h2>Elija entre nuestra variedad de <span>Comidas</span></h2>
+        <p>Seleccione un producto para ver detalles o agregar al carrito</p>
+        <div>
+            <p>Aqui deben desplegarse desde un principio los productos</p>
+        </div>
+        <button>Ir a Bebidas</button>
+        <button>Ir a Postres</button>
+        <button>Volver al Inicio</button>
+    </div>
+    <!--Bebidas-->
+    <div>
+        <h2>Elija entre nuestra variedad de <span>Bebidas</span></h2>
+        <p>Seleccione un producto para ver detalles o agregar al carrito</p>
+        <div>
+            <p>Aqui deben desplegarse desde un principio los productos</p>
+        </div>
+        <button>Ir a Comidas</button>
+        <button>Ir a Postres</button>
+        <button>Volver al Inicio</button>
+    </div>
+    <!--Postres-->
+    <div>
+        <h2>Elija entre nuestra variedad de <span>Postres</span></h2>
+        <p>Seleccione un producto para ver detalles o agregar al carrito</p>
+        <div>
+            <p>Aqui deben desplegarse desde un principio los productos</p>
+        </div>
+        <button>Ir a Comidas</button>
+        <button>Ir a Bebidas</button>
+        <button>Volver al Inicio</button>
+    </div>
+    <!--Promociones-->
     <div>
         <div class="blackBackground"></div>
         <article>
@@ -143,12 +175,13 @@
                     <input type="text" value="0" disabled>
                     <button>+</button>
                 </div>
+                <button type="reset">Volver</button>
                 <button type="button">Agregar al Carrito</button>
             </div>
         </article>
     </div>
 
-    <!--Alert-->
+    <!--Alerta de Error-->
     <div>
         <figure>
             LogoError
@@ -156,7 +189,7 @@
         <p>Parrafo de Error Personalizable</p>
     </div>
 
-    <!--Alert-->
+    <!--Confirmación-->
     <div>
         <figure>
             LogoExito
@@ -171,6 +204,7 @@
         <div>
             <p>Aqui van los productos que se van agregando al Carrito</p>
         </div>
+        <button>Volver</button>
         <button>Continuar</button>
     </article>
 
@@ -216,12 +250,14 @@
         </div>
     </section>
 
-    <!--Confirmation-Modal-->
+    <!--Confirmation de Compra-->
     <div>
         <h2>¡Orden realizada con Éxito!</h2>
         <p>Hora de la Orden: <span>3horas</span></p>
         <p>Tiempo Estimado de entrega: <span>Tiempo 30min</span></p>
     </div>
 
+    <script src="script.js"></script>
 </body>
+
 </html>

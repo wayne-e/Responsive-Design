@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding: 3px;
+}
+
+h1, h2, h3, h4, p {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.full-width {
+    width: 100%;
+}
+
+header {
+    height: 80px;
+    background-color: rgb(179, 171, 171);
+}
+
+#logo-div{
+    width: 35%;
+}
+
+#main-navbar{
+    width: 40%;
+}
+
+#total-div{
+    width: 10%;
+}
+
+section {
+    height: 550px;
+    background-color: #333333;
+    margin: 5px 0;
+}
