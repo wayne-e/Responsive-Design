@@ -13,15 +13,27 @@ h1, h2, h3, h4, p {
     margin: 10px;
 }
 
+a{
+    text-decoration: none;
+}
+
 .flex {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.fas, .fab {
+.fas{
     font-size: 30px;
     margin: 0 3px;
+}
+
+.fab{
+    font-size: 50px;
+    margin: 0 5px;
+}
+
+.fas, .fab {
     color: wheat;
     cursor: pointer;
 }
@@ -71,7 +83,6 @@ h1, h2, h3, h4, p {
 }
 
 .nav-link {
-    text-decoration: none;
     color: wheat;
     transition: opacity 200ms ease-in-out;
     overflow: hidden;
@@ -142,6 +153,9 @@ section {
 .promo-section {
     justify-content: center;
     background-color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+
 }
 
 .promotions-div {
@@ -150,25 +164,30 @@ section {
 }
 
 .promotion-figure {
-    width: 300px;
+    width: 275px;
+    height: 400px;
     justify-content: center;
-    margin: 20px;
+    margin: 15px;
     padding: 10px;
     border: solid 1px gray;
     border-radius: 15px;
-    background-color: wheat;
+    background-color: rgb(190, 188, 188);
     cursor: pointer;
 }
 
 .promotion-figure:hover {
+    background-color: rgb(129, 125, 125);
     transition: 100ms ease-in-out;
-    border: solid 2px #333333;
+}
+
+.promo-description p{
+    text-align: justify;
 }
 
 .promo-image {
-    width: 250px;
+    width: 200px;
     height: auto;
-    border-radius: 125px;
+    border-radius: 100px;
 }
 
 .products-section {
@@ -192,10 +211,6 @@ section {
 
 .catalog-div:hover {
     border: solid 2px wheat;
-}
-
-.contactus-section {
-    background-color: wheat;
 }
 
 .contact-element {
@@ -249,7 +264,7 @@ section {
 }
 
 footer {
-    height: 250px;
+    height: 200px;
     background-color: rgb(80, 31, 31);
 }
 
