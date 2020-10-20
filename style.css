@@ -3,19 +3,43 @@
     padding: 0;
 }
 
-h1, h2, h3, h4, p {
-    text-align: center;
+html {
+    font-family: 'Nunito', sans-serif;
+    scroll-behavior: smooth;
 }
 
-body{
-    background-color:rgb(187, 183, 183);
+h1, h2, h3, h4, p {
+    text-align: center;
+    margin: 10px;
+}
+
+.non-display{
+    display: none;
 }
 
 .flex {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.fas, .fab {
+    font-size: 30px;
+    margin: 0 3px;
+    color: wheat;
+    cursor: pointer;
+}
+
+.fas:hover, .fab:hover {
+    color: rgb(211, 149, 33);
+}
+
+.bold-span {
+    font-weight: bold;
+}
+
+.wheat-span {
+    color: wheat;
 }
 
 /*HEADER Y SUS ELEMENTOS*/
@@ -24,7 +48,7 @@ body{
     flex-wrap: nowrap;
     justify-content: space-between;
     height: 100px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.9);
     color: wheat;
     font-size: 20px;
     font-weight: bolder;
@@ -34,51 +58,230 @@ body{
     right: 0;
 }
 
-#logo-div, #shopping-cart-div, #main-navbar, header{
+#logo-div, #shopping-cart-div, .main-navbar, header {
     flex-wrap: nowrap;
     height: 100%;
     padding: 0 10px;
 }
 
-#logo-hiperion{
-    height: 100%;
+.logo-olympus {
+    height: 80%;
     margin: 0 10px;
 }
 
-#main-navbar{
+.main-navbar {
     width: 50%;
     justify-content: space-between;
 }
 
-#main-navbar>a{
+.nav-link {
     text-decoration: none;
     color: wheat;
+    transition: opacity 200ms ease-in-out;
+    overflow: hidden;
 }
 
-
-#main-navbar>a:hover{
-    color: #333333;
-    text-shadow: -2px -2px 2px wheat;
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    margin-top: 3px;
+    border-radius: 3px;
+    background: wheat;
+    transition: width 200ms ease-in-out;
 }
 
-#shopping-cart-logo{
+.nav-link.main-navbar--current::after {
+    width: 100%;
+    background: brown;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+#shopping-cart-logo {
     height: 50%;
     margin: 0 3px;
 }
 
+.bars-icon-span {
+    display: none;
+    margin: 0 15px;
+}
+
 /*MAIN Y SUS ELEMENTOS*/
 
-.full-width{
+.full-width {
     width: 100%;
 }
 
 section {
-    height: 650px;
-    background-color: #333333;
+    margin-bottom: 3px;
+    padding: 125px 0;
 }
 
-#home-section{
-    background-image: url("img/bg4.jpg");
+.home-section {
+    justify-content: left;
+    background-image: url("img/bg7.png");
+    background-position: center center;
     background-size: cover;
-    background-position: center;
+    margin-top: 100px;
+    padding-left: 10%;
+}
+
+.home-description-div {
+    width: 35%;
+    background-color: rgb(161, 160, 160, 0.3);
+    padding: 35px;
+    border-radius: 15px;
+}
+
+.home-section-logo {
+    justify-content: center;
+    margin: 10px auto;
+}
+
+.promo-section {
+    justify-content: center;
+    background-color: white;
+}
+
+.promotions-div {
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.promotion-figure {
+    width: 300px;
+    justify-content: center;
+    margin: 20px;
+    padding: 10px;
+    border: solid 1px gray;
+    border-radius: 15px;
+    background-color: wheat;
+    cursor: pointer;
+}
+
+.promotion-figure:hover {
+    transition: 100ms ease-in-out;
+    border: solid 2px #333333;
+}
+
+.promo-image {
+    width: 250px;
+    height: auto;
+    border-radius: 125px;
+}
+
+.products-section {
+    background-image: url("img/bg2.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.catalog-div {
+    justify-content: center;
+    margin: 10px 10%;
+    height: 150px;
+    border: solid 2px #333333;
+    border-radius: 15px;
+    background-image: url("img/marco2.jpg");
+    background-size: cover;
+    background-position: center center;
+    color: wheat;
+    cursor: pointer;
+}
+
+.catalog-div:hover {
+    border: solid 2px wheat;
+}
+
+.contactus-section {
+    background-color: wheat;
+}
+
+.contact-element {
+    justify-content: center;
+    width: 40%;
+    margin: 20px auto 0;
+    padding: 10px;
+}
+
+.comments-description {
+    padding: 20px 0;
+    background-color: rgb(189, 63, 63, 0.4);
+    border-radius: 15px;
+}
+
+.comments-description-element {
+    width: 50%;
+    padding: 10px;
+}
+
+.comments-form {
+    justify-content: center;
+    width: 70%;
+    margin: 20px auto;
+    padding: 30px 20px;
+    background-color: #333333;
+    border-radius: 15px;
+}
+
+.comments-form-field {
+    padding: 15px;
+    border-radius: 5px;
+    margin: 5px;
+    width: 90%;
+}
+
+.comments-button {
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    border: solid 2px wheat;
+    border-radius: 10px;
+    background-color: rgba(243, 146, 49, 0.596);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.comments-button:hover {
+    border: solid 2px gray;
+}
+
+footer {
+    height: 250px;
+    background-color: rgb(80, 31, 31);
+}
+
+.footer-element {
+    justify-content: center;
+    margin: 10px auto;
+}
+
+.logo-olympus {
+    justify-content: center;
+    width: 100px;
+}
+
+@media (max-width: 1050px) {
+    .bars-icon-span {
+        display: block;
+    }
+    .main-navbar {
+        height: min-content;
+        width: 100%;
+        display: inline-flex;
+        flex-direction: column;
+        position: fixed;
+        top: 100px;
+        right: 0;
+        background-color: #333333;
+    }
+    .nav-link {
+        margin: 20px;
+    }
 }

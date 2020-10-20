@@ -4,123 +4,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EL Hiperión|Bistro</title>
+    <title>Olympus | Restaurante</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header id="header" class="flex">
         <div id="logo-div" class="flex">
-            <img src="img/logo1.png" alt="Hiperion|Restaurante" id="logo-hiperion">
-            <h3>Hiperion|Restaurante</h3>
+            <img src="img/logo2.png" alt="Olympus | Restaurante" class="logo-olympus">
+            <h3>Olympus | Restaurante</h3>
         </div>
-        <nav id="main-navbar" class="flex">
-            <a href="#home-section">INICIO</a>
-            <a href="#promo-section">PROMOCIONES</a>
-            <a href="#products-section">PRODUCTOS</a>
-            <a href="#contactus-section">CONTACTANOS</a>
+        <nav class="flex main-navbar">
+            <a href="#home" class="nav-link">INICIO</a>
+            <a href="#promo" class="nav-link">PROMOCIONES</a>
+            <a href="#products" class="nav-link">PRODUCTOS</a>
+            <a href="#contactus" class="nav-link">CONTÁCTANOS</a>
         </nav>
         <div id="shopping-cart-div" class="flex">
-            <img src="img/shopping-cart.png" alt="shopping-cart" id="shopping-cart-logo">
-            <h4>$0.00</h4>
+            <i class="fas fa-shopping-cart"></i>
+            <span class="bars-icon-span"><i class="fas fa-bars"></i></span>
         </div>
-        <!--class="flex full-width"-->
     </header>
     <main class="flex full-width">
-        <section id="home-section" class="flex full-width">
-            <div>
-                <h1>EL HIPERIÓN | BISTRO</h1>
+        <section id="home" class="flex full-width home-section">
+            <div class="home-description-div">
+                <figure class="flex full-width home-section-logo"><img src="img/logo2.png" alt="logo-olympus" class="logo-olympus"></figure>
+                <h1>Olympus | Restaurante</h1>
                 <h2>Productos fuera de este mundo</h2>
-                <p>
-                    Transportate a una nueva experiencia gourmet en El Hiperion|Bistro, donde
+                <p class="wheat-span">
+                    Transportate a una nueva experiencia gourmet en Olympus | Restaurante, donde
                     te ofrecemos una gran cantidad de productos con gustos y sabores fuera de
                     este mundo para deleitar tu paladar.
                 </p>
-                <p>
+                <p class="wheat-span">
                     Disfruta de nuestros Alimentos preparados
                     bajo los mejores procesos y con los mejores ingredientes.
                     Deleitate con nuestra diversidad de Bebidas y sella tu visita con los mejores
                     Postres de todo el sector; todo a excelentes precios.
                 </p>
-                <p>
+                <p class="wheat-span">
                     Revisa nuestras Promociones, ¡Será un placer atenderte!
                 </p>
             </div>
         </section>
-        <section id="promo-section" class="flex full-width">
+        <section id="promo" class="flex full-width promo-section">
             <h2 class="full-width">Promociones</h2>
             <p class="full-width">Elija entre nuestros fabulosos Combos en Promoción</p>
-            <div class="flex full-width">
-                <figure>
-                    <img src="img/promocion.jpg" alt="promocion">
-                    <figcaption>
+            <div class="flex full-width promotions-div">
+                <figure class="flex promotion-figure">
+                    <img src="img/promo.jpg" alt="promocion" class="promo-image">
+                    <figcaption class="promo-description">
                         <h4>NOMBRE</h4>
-                        <p>Descripcion</p>
+                        <p>Deliciosas......</p>
                         <p><span>Precio</span></p>
                     </figcaption>
                 </figure>
-
-                <figure>
-                    <img src="img/promocion.jpg" alt="promocion">
-                    <figcaption>
+                <figure class="flex promotion-figure">
+                    <img src="img/promo.jpg" alt="promocion" class="promo-image">
+                    <figcaption class="promo-description">
                         <h4>NOMBRE</h4>
-                        <p>Descripcion</p>
+                        <p>Deliciosas......</p>
                         <p><span>Precio</span></p>
                     </figcaption>
                 </figure>
-
-                <figure>
-                    <img src="img/promocion.jpg" alt="promocion">
-                    <figcaption>
+                <figure class="flex promotion-figure">
+                    <img src="img/promo.jpg" alt="promocion" class="promo-image">
+                    <figcaption class="promo-description">
                         <h4>NOMBRE</h4>
-                        <p>Descripcion</p>
+                        <p>Deliciosas......</p>
+                        <p><span>Precio</span></p>
+                    </figcaption>
+                </figure>
+                <figure class="flex promotion-figure">
+                    <img src="img/promo.jpg" alt="promocion" class="promo-image">
+                    <figcaption class="promo-description">
+                        <h4>NOMBRE</h4>
+                        <p>Deliciosas......</p>
+                        <p><span>Precio</span></p>
+                    </figcaption>
+                </figure>
+                <figure class="flex promotion-figure">
+                    <img src="img/promo.jpg" alt="promocion" class="promo-image">
+                    <figcaption class="promo-description">
+                        <h4>NOMBRE</h4>
+                        <p>Deliciosas......</p>
+                        <p><span>Precio</span></p>
+                    </figcaption>
+                </figure>
+                <figure class="flex promotion-figure">
+                    <img src="img/promo.jpg" alt="promocion" class="promo-image">
+                    <figcaption class="promo-description">
+                        <h4>NOMBRE</h4>
+                        <p>Deliciosas......</p>
                         <p><span>Precio</span></p>
                     </figcaption>
                 </figure>
             </div>
         </section>
-        <section id="products-section" class="flex full-width">
+        <section id="products" class="flex full-width products-section">
             <h2 class="full-width">Nuestros Productos</h2>
             <p class="full-width">Consulte nuestros Catálogos y elija entre la variedad de Productos</p>
-            <div class="flex full-width">Ver Catálogo de Comidas</div>
-            <div class="flex full-width">Ver Catálogo de Bebidas</div>
-            <div class="flex full-width">Ver Catálogo de Postres</div>
+            <div class="flex full-width catalog-div foods-catalog">
+                <h3>Ver Catálogo de Bebidas</h3>
+            </div>
+            <div class="flex full-width catalog-div drinks-catalog">
+                <h3>Ver Catálogo de Bebidas</h3>
+            </div>
+            <div class="flex full-width catalog-div desserts-catalog">
+                <h3>Ver Catálogo de Bebidas</h3>
+            </div>
         </section>
-        <section id="contactus-section" class="flex full-width">
-            <article>
-                <h2 class="full-width">Contáctenos</h2>
-                <p class="full-width">Sugerencias, Comentarios</p>
-
-                <p class="full-width">En El Hiperión|Bistro nuestra tripulación está empeñada en
+        <section id="contactus" class="flex full-width contactus-section">
+            <h2 class="full-width">¡Contáctenos!</h2>
+            <article class="contact-element comments-description flex">
+                <h2 class="comments-description-element">En Olympus | Restaurante, <br> ¡Nos encantan los comentarios!</h2>
+                <p class="comments-description-element">Nuestro personal está empeñada en
                     atenderle cada vez de una mejor manera. Sus comentarios nos ayudan a mejorar y
                     permiten nuestro crecimiento.
                 </p>
-                <p class="full-width">¿Alguna Sugerencia? ¿Le gustaría opinar acerca de nuevos productos?
+                <p class="comments-description-element">¿Alguna Sugerencia? ¿Le gustaría opinar acerca de nuevos productos?
                     No dude en comentarnos, y será un placer considerar sus ideas.
                 </p>
-                <p class="full-width">¿Es siempre un gusto atenderle!</p>
+                <p class="comments-description-element">¿Es siempre un gusto atenderle!</p>
             </article>
-            <div>
-                <h2>Ingrese sus datos y envíenos sus comentarios</h2>
+            <div class="contact-element">
+                <h2 class="full-width">Ingrese sus datos y <br> envíenos sus comentarios</h2>
                 <!--No usar labels, se vera mejor-->
-                <form action="">
-                    <input type="text" id="user-name" placeholder="Nombre Completo:">
-                    <input type="email" id="user-email" placeholder="Correo Electrónico">
-                    <textarea id="user-comments" cols="30" rows="10">Sugerencia o Comentario</textarea>
-            </div>
-            </form>
+                <form action="" class="comments-form flex">
+                    <input class="comments-form-field" type="text" id="user-name" placeholder="Nombre Completo:">
+                    <input class="comments-form-field" type="email" id="user-email" placeholder="Correo Electrónico">
+                    <textarea class="comments-form-field" id="user-comments" cols="30"
+                        rows="10">Sugerencia o Comentario</textarea>
+                    <button type="submit" class="comments-button">Enviar</button>
+                </form>
             </div>
         </section>
     </main>
     <footer class="flex full-width">
-        <div>
-            <h3>SIGUENOS</h3>
-            <figure>tw</figure>
-            <figure>fb</figure>
-            <figure>ig</figure>
+        <div class="flex footer-element">
+            <h3 class="full-width wheat-span">SÍGUENOS <br> EN NUESTRAS REDES</h3>
+            <a class="flex" href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+            <a class="flex" href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a>
+            <a class="flex" href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
         </div>
-        <div>
-            <p>El Hiperión | Bistro</p>
+        <div class="footer-element">
+            <h4 class="wheat-span">Olympus | Restaurante</h4>
         </div>
     </footer>
 
@@ -212,7 +241,7 @@
     </article>
 
     <!--Final-Modal-->
-    <section>
+    <div>
         <h2>¡Ingresa tus Datos!</h2>
         <div>
             <p>Espacio para el arreglo de orden (objeto)</p>
@@ -251,7 +280,7 @@
                 </div>
             </form>
         </div>
-    </section>
+    </div>
 
     <!--Confirmation de Compra-->
     <div>
@@ -261,6 +290,7 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/ef503248b8.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
