@@ -60,10 +60,6 @@ h1, h2, h3, h4, p {
     padding: 0 10px;
 }
 
-#logo-div{
-    width: 30%;
-}
-
 .logo-olympus {
     height: 80%;
     margin: 0 10px;
@@ -280,12 +276,12 @@ footer {
         top: 100px;
         right: 0;
         background-color: #333333;
-        overflow-y: scroll;
     }
     .nav-link {
         margin: 20px;
     }
 }
-.display-bar{
+
+.display-bar {
     display: inline-flex;
 }
