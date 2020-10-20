@@ -13,10 +13,6 @@ h1, h2, h3, h4, p {
     margin: 10px;
 }
 
-.non-display{
-    display: none;
-}
-
 .flex {
     display: flex;
     align-items: center;
@@ -274,7 +270,7 @@ footer {
     .main-navbar {
         height: min-content;
         width: 100%;
-        display: inline-flex;
+        display: none;
         flex-direction: column;
         position: fixed;
         top: 100px;
@@ -284,4 +280,7 @@ footer {
     .nav-link {
         margin: 20px;
     }
+}
+.display-bar{
+    display: inline-flex;
 }
