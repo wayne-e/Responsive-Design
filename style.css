@@ -13,6 +13,18 @@ h1, h2, h3, h4, p {
     margin: 10px;
 }
 
+h1{
+    font-size: 40px;
+}
+
+h2{
+    font-size: 35px;
+}
+
+h3{
+    font-size: 23px;
+}
+
 a{
     text-decoration: none;
 }
@@ -55,7 +67,7 @@ a{
 #header {
     flex-wrap: nowrap;
     justify-content: space-between;
-    height: 100px;
+    height: 70px;
     background: rgba(0, 0, 0, 0.9);
     color: wheat;
     font-size: 20px;
@@ -126,7 +138,7 @@ a{
 
 section {
     margin-bottom: 3px;
-    padding: 125px 0;
+    padding: 90px 0;
 }
 
 .home-section {
@@ -134,12 +146,12 @@ section {
     background-image: url("img/bg7.png");
     background-position: center center;
     background-size: cover;
-    margin-top: 100px;
+    margin-top: 70px;
     padding-left: 10%;
 }
 
 .home-description-div {
-    width: 35%;
+    width: 45%;
     background-color: rgb(161, 160, 160, 0.3);
     padding: 35px;
     border-radius: 15px;
@@ -158,12 +170,12 @@ section {
 
 }
 
-.promotions-div {
+.promo-div {
     justify-content: center;
     margin: 20px 0;
 }
 
-.promotion-figure {
+.promo-figure {
     width: 275px;
     height: 400px;
     justify-content: center;
@@ -264,7 +276,7 @@ section {
 }
 
 footer {
-    height: 200px;
+    height: 190px;
     background-color: rgb(80, 31, 31);
 }
 
@@ -288,12 +300,31 @@ footer {
         display: none;
         flex-direction: column;
         position: fixed;
-        top: 100px;
+        top: 70px;
         right: 0;
         background-color: #333333;
     }
     .nav-link {
         margin: 20px;
+    }
+    .home-section{
+        justify-content: center;
+        padding: 50px 10% 20px;
+    }
+    .home-description-div{
+        width: 100%;
+    }
+    .contact-element{
+        width: 90%;
+    }
+    .comments-description-element {
+        width: 90%;
+    }
+}
+
+@media(max-width: 500px){
+    .home-section{
+        padding: 50px 3% 20px;
     }
 }
 
