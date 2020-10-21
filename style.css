@@ -13,19 +13,19 @@ h1, h2, h3, h4, p {
     margin: 10px;
 }
 
-h1{
+h1 {
     font-size: 40px;
 }
 
-h2{
+h2 {
     font-size: 35px;
 }
 
-h3{
+h3 {
     font-size: 23px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -35,12 +35,12 @@ a{
     flex-wrap: wrap;
 }
 
-.fas{
+.fas {
     font-size: 30px;
     margin: 0 3px;
 }
 
-.fab{
+.fab {
     font-size: 50px;
     margin: 0 5px;
 }
@@ -64,10 +64,11 @@ a{
 
 /*HEADER Y SUS ELEMENTOS*/
 
-#header {
+.header-class {
     flex-wrap: nowrap;
     justify-content: space-between;
     height: 70px;
+    padding: 0 5px;
     background: rgba(0, 0, 0, 0.9);
     color: wheat;
     font-size: 20px;
@@ -78,7 +79,7 @@ a{
     right: 0;
 }
 
-#logo-div, #shopping-cart-div, .main-navbar, header {
+.logo-div, .shopping-cart-div, .main-navbar {
     flex-wrap: nowrap;
     height: 100%;
     padding: 0 10px;
@@ -167,7 +168,6 @@ section {
     background-color: white;
     padding-left: 10%;
     padding-right: 10%;
-
 }
 
 .promo-div {
@@ -176,7 +176,7 @@ section {
 }
 
 .promo-figure {
-    width: 275px;
+    width: 250px;
     height: 400px;
     justify-content: center;
     margin: 15px;
@@ -192,8 +192,9 @@ section {
     transition: 100ms ease-in-out;
 }
 
-.promo-description p{
+.promo-description {
     text-align: justify;
+    text-align-last: center;
 }
 
 .promo-image {
@@ -276,7 +277,8 @@ section {
 }
 
 footer {
-    height: 190px;
+    height: auto;
+    padding: 30px 0;
     background-color: rgb(80, 31, 31);
 }
 
@@ -307,14 +309,14 @@ footer {
     .nav-link {
         margin: 20px;
     }
-    .home-section{
+    .home-section {
         justify-content: center;
         padding: 50px 10% 20px;
     }
-    .home-description-div{
+    .home-description-div {
         width: 100%;
     }
-    .contact-element{
+    .contact-element {
         width: 90%;
     }
     .comments-description-element {
@@ -322,8 +324,15 @@ footer {
     }
 }
 
-@media(max-width: 500px){
-    .home-section{
+@media(max-width: 700px) {
+    .logo-div {
+        width: 40%;
+    }
+    .shopping-cart-div{
+        justify-content: center;
+        width: 20%;
+    }
+    .home-section {
         padding: 50px 3% 20px;
     }
 }
