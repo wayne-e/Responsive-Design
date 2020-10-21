@@ -3,6 +3,8 @@ const getLinkById = id => document.querySelector(`a[href='#${id}']`);
 const barsIcon = document.getElementById("bars-icon")
 const mainNavbar = document.getElementById("navbar");
 const navLinks = document.getElementsByClassName("nav-link");
+const productDiv = document.getElementById("product-div");
+const productElement = document.getElementsByClassName("product-element");
 
 const inView = section => {
     let top = section.offsetTop;
@@ -36,5 +38,11 @@ barsIcon.addEventListener("click", function () {
 for(i=0;i<navLinks.length;i++){
     navLinks[i].addEventListener("click", function(){
         mainNavbar.classList.remove("display-bar");
+    });
+}
+
+for(i=0;i<productElement.length;i++){
+    productElement[i].addEventListener("click", function(){
+        productDiv.classList.remove("display-none");
     });
 }
