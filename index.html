@@ -22,7 +22,7 @@
             <a href="#contactus" class="nav-link">CONTÁCTANOS</a>
         </nav>
         <div class="flex shopping-cart-div">
-            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-shopping-cart" id="shopping-cart"></i>
             <span class="bars-icon-span" id="bars-icon"><i class="fas fa-bars"></i></span>
         </div>
     </header>
@@ -53,7 +53,7 @@
             <h2 class="full-width">Promociones</h2>
             <p class="full-width">Elija entre nuestros fabulosos Combos en Promoción</p>
             <div class="flex full-width promo-div">
-                <figure class="flex promo-figure product-element">
+                <figure class="flex promo-figure product-item">
                     <img src="img/promo.jpg" alt="promocion" class="promo-image">
                     <figcaption>
                         <h4>NOMBRE</h4>
@@ -61,7 +61,7 @@
                         <p><span class="bold-span">Precio</span></p>
                     </figcaption>
                 </figure>
-                <figure class="flex promo-figure product-element">
+                <figure class="flex promo-figure product-item">
                     <img src="img/promo.jpg" alt="promocion" class="promo-image">
                     <figcaption>
                         <h4>NOMBRE</h4>
@@ -69,7 +69,7 @@
                         <p><span class="bold-span">Precio</span></p>
                     </figcaption>
                 </figure>
-                <figure class="flex promo-figure product-element">
+                <figure class="flex promo-figure product-item">
                     <img src="img/promo.jpg" alt="promocion" class="promo-image">
                     <figcaption>
                         <h4>NOMBRE</h4>
@@ -77,7 +77,7 @@
                         <p><span class="bold-span">Precio</span></p>
                     </figcaption>
                 </figure>
-                <figure class="flex promo-figure product-element">
+                <figure class="flex promo-figure product-item">
                     <img src="img/promo.jpg" alt="promocion" class="promo-image">
                     <figcaption>
                         <h4>NOMBRE</h4>
@@ -85,7 +85,7 @@
                         <p><span class="bold-span">Precio</span></p>
                     </figcaption>
                 </figure>
-                <figure class="flex promo-figure product-element">
+                <figure class="flex promo-figure product-item">
                     <img src="img/promo.jpg" alt="promocion" class="promo-image">
                     <figcaption>
                         <h4>NOMBRE</h4>
@@ -93,7 +93,7 @@
                         <p><span class="bold-span">Precio</span></p>
                     </figcaption>
                 </figure>
-                <figure class="flex promo-figure product-element">
+                <figure class="flex promo-figure product-item">
                     <img src="img/promo.jpg" alt="promocion" class="promo-image">
                     <figcaption>
                         <h4>NOMBRE</h4>
@@ -106,14 +106,14 @@
         <section id="products" class="flex full-width products-section">
             <h2 class="full-width">Nuestros Productos</h2>
             <p class="full-width">Consulte nuestros Catálogos y elija entre la variedad de Productos</p>
-            <div class="flex full-width catalog-div foods-catalog">
+            <div class="flex full-width catalog-div foods-catalog" id="food-catalog">
+                <h3>Ver Catálogo de Comidas</h3>
+            </div>
+            <div class="flex full-width catalog-div drinks-catalog" id="drink-catalog">
                 <h3>Ver Catálogo de Bebidas</h3>
             </div>
-            <div class="flex full-width catalog-div drinks-catalog">
-                <h3>Ver Catálogo de Bebidas</h3>
-            </div>
-            <div class="flex full-width catalog-div desserts-catalog">
-                <h3>Ver Catálogo de Bebidas</h3>
+            <div class="flex full-width catalog-div desserts-catalog" id="dessert-catalog">
+                <h3>Ver Catálogo de Postres</h3>
             </div>
         </section>
         <section id="contactus" class="flex full-width contactus-section">
@@ -156,7 +156,125 @@
     </footer>
 
     <!--Modals-->
-    <!--Promociones-->
+
+    <!--Catalog-->
+    <div id="all-products-catalog" class="display-none">
+        <div class="black-background"></div>
+        <div class="product-viewer modal-position">
+            <div id="food-div" class="display-none">
+                <h2>Elija entre nuestra variedad de <span class="bold-span">Comidas</span></h2>
+                <p>Seleccione un producto para ver detalles o agregar al carrito</p>
+                <div class="flex button-container">
+                    <figure class="flex product-element product-item">
+                        <img src="img/promo.jpg" alt="promocion" class="promo-image">
+                        <figcaption class="product-description">
+                            <h4>NOMBRE</h4>
+                            <p class="promo-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Aliquam
+                                sunt mollitia expedita fugiat dolo</p>
+                            <p><span class="bold-span">Precio</span></p>
+                        </figcaption>
+                    </figure>
+                    <figure class="flex product-element product-item">
+                        <img src="img/promo.jpg" alt="promocion" class="promo-image">
+                        <figcaption class="product-description">
+                            <h4>NOMBRE</h4>
+                            <p class="promo-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Aliquam
+                                sunt mollitia expedita fugiat dolo</p>
+                            <p><span class="bold-span">Precio</span></p>
+                        </figcaption>
+                    </figure>
+                    <figure class="flex product-element product-item">
+                        <img src="img/promo.jpg" alt="promocion" class="promo-image">
+                        <figcaption class="product-description">
+                            <h4>NOMBRE</h4>
+                            <p class="promo-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Aliquam
+                                sunt mollitia expedita fugiat dolo</p>
+                            <p><span class="bold-span">Precio</span></p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div id="drink-div" class="display-none">
+                <h2>Elija entre nuestra variedad de <span class="bold-span">Bebidas</span></h2>
+                <p>Seleccione un producto para ver detalles o agregar al carrito</p>
+                <div class="flex button-container">
+                    <figure class="flex product-element product-item">
+                        <img src="img/promo.jpg" alt="promocion" class="promo-image">
+                        <figcaption class="product-description">
+                            <h4>NOMBRE</h4>
+                            <p class="promo-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Aliquam
+                                sunt mollitia expedita fugiat dolo</p>
+                            <p><span class="bold-span">Precio</span></p>
+                        </figcaption>
+                    </figure>
+                    <figure class="flex product-element product-item">
+                        <img src="img/promo.jpg" alt="promocion" class="promo-image">
+                        <figcaption class="product-description">
+                            <h4>NOMBRE</h4>
+                            <p class="promo-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Aliquam
+                                sunt mollitia expedita fugiat dolo</p>
+                            <p><span class="bold-span">Precio</span></p>
+                        </figcaption>
+                    </figure>
+                    <figure class="flex product-element product-item">
+                        <img src="img/promo.jpg" alt="promocion" class="promo-image">
+                        <figcaption class="product-description">
+                            <h4>NOMBRE</h4>
+                            <p class="promo-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Aliquam
+                                sunt mollitia expedita fugiat dolo</p>
+                            <p><span class="bold-span">Precio</span></p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div id="dessert-div" class="display-none">
+                <h2>Elija entre nuestra variedad de <span class="bold-span">Postres</span></h2>
+                <p>Seleccione un producto para ver detalles o agregar al carrito</p>
+                <div class="flex button-container">
+                    <figure class="flex product-element product-item">
+                        <img src="img/promo.jpg" alt="promocion" class="promo-image">
+                        <figcaption class="product-description">
+                            <h4>NOMBRE</h4>
+                            <p class="promo-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Aliquam
+                                sunt mollitia expedita fugiat dolo</p>
+                            <p><span class="bold-span">Precio</span></p>
+                        </figcaption>
+                    </figure>
+                    <figure class="flex product-element product-item">
+                        <img src="img/promo.jpg" alt="promocion" class="promo-image">
+                        <figcaption class="product-description">
+                            <h4>NOMBRE</h4>
+                            <p class="promo-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Aliquam
+                                sunt mollitia expedita fugiat dolo</p>
+                            <p><span class="bold-span">Precio</span></p>
+                        </figcaption>
+                    </figure>
+                    <figure class="flex product-element product-item">
+                        <img src="img/promo.jpg" alt="promocion" class="promo-image">
+                        <figcaption class="product-description">
+                            <h4>NOMBRE</h4>
+                            <p class="promo-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Aliquam
+                                sunt mollitia expedita fugiat dolo</p>
+                            <p><span class="bold-span">Precio</span></p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="flex button-container">
+                <button id="close-catalog-button" class="submit-button">Atrás</button>
+            </div>
+        </div>
+    </div>
+    <!--Modal producto-->
     <div id="product-div" class="display-none">
         <div class="black-background"></div>
         <article class="flex product-viewer modal-position">
@@ -176,79 +294,58 @@
                         <button type="button" class="amount-buttons value-button">+</button>
                     </div>
                     <div class="flex">
-                        <button class="submit-button" type="reset">Volver</button>
-                        <button class="submit-button" type="button">Agregar al Carrito</button>
+                        <button id="back-product-btn" class="submit-button" type="reset">Volver</button>
+                        <button id="add-to-cart" class="submit-button" type="button">Agregar al Carrito</button>
                     </div>
                 </form>
             </div>
         </article>
     </div>
 
-
-
-    <!--Comidas-->
-    <div>
-        <h2>Elija entre nuestra variedad de <span>Comidas</span></h2>
-        <p>Seleccione un producto para ver detalles o agregar al carrito</p>
-        <div>
-            <p>Aqui deben desplegarse desde un principio los productos</p>
+    <!--Error-->
+    <div id="error-div" class="display-none">
+        <div class="flex alert-div error-div">
+            <figure>
+                <i class="fa fa-ban" aria-hidden="true"></i>
+            </figure>
+            <p>Parrafo de Error Personalizable</p>
         </div>
-        <button>Ir a Bebidas</button>
-        <button>Ir a Postres</button>
-        <button>Volver al Inicio</button>
     </div>
-    <!--Bebidas-->
-    <div>
-        <h2>Elija entre nuestra variedad de <span>Bebidas</span></h2>
-        <p>Seleccione un producto para ver detalles o agregar al carrito</p>
-        <div>
-            <p>Aqui deben desplegarse desde un principio los productos</p>
-        </div>
-        <button>Ir a Comidas</button>
-        <button>Ir a Postres</button>
-        <button>Volver al Inicio</button>
-    </div>
-    <!--Postres-->
-    <div>
-        <h2>Elija entre nuestra variedad de <span>Postres</span></h2>
-        <p>Seleccione un producto para ver detalles o agregar al carrito</p>
-        <div>
-            <p>Aqui deben desplegarse desde un principio los productos</p>
-        </div>
-        <button>Ir a Comidas</button>
-        <button>Ir a Bebidas</button>
-        <button>Volver al Inicio</button>
-    </div>
-
-    <!--Alerta de Error-->
-    <div>
-        <figure>
-            LogoError
-        </figure>
-        <p>Parrafo de Error Personalizable</p>
-    </div>
-
     <!--Confirmación-->
-    <div>
-        <figure>
-            LogoExito
-        </figure>
-        <p>¡Agregado Correctamente!</p>
-    </div>
-
-    <!--Carrito-->
-    <article>
-        <h3>Mis Productos</h3>
-        <p>Click en Continuar para proceder con la compra</p>
-        <div>
-            <p>Aqui van los productos que se van agregando al Carrito</p>
+    <div id="success-div" class="display-none">
+        <div class="black-background"></div>
+        <div class="flex alert-div success-div">
+            <figure>
+                <i class="fa fa-check" aria-hidden="true"></i>
+            </figure>
+            <p>¡Agregado Correctamente!</p>
         </div>
-        <button>Volver</button>
-        <button>Continuar</button>
-    </article>
+    </div>
+    <!--Carrito-->
+    <div id="shopping-cart-div" class="display-none">
+        <div class="black-background"></div>
+        <article class="product-viewer modal-position shopping-cart">
+            <h3>Mis Productos</h3>
+            <p>Click en Continuar para proceder con la compra</p>
+            <div class="flex button-container">
+                <figure class="flex product-element">
+                    <img src="img/promo.jpg" alt="promocion" class="cart-image">
+                    <figcaption class="product-description">
+                        <h4>NOMBRE</h4>
+                        <p><span class="bold-span">Precio</span></p>
+                        <div class="flex button-container"><button type="button" class="remove-item">Quitar Producto</button></div>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="flex button-container">
+                <button id="close-cart-button" class="submit-button">Volver</button>
+                <button class="submit-button">Continuar</button>
+            </div>
+        </article>
+    </div>
 
     <!--Final-Modal-->
-    <div>
+    <div class="display-none">
         <h2>¡Ingresa tus Datos!</h2>
         <div>
             <p>Espacio para el arreglo de orden (objeto)</p>
@@ -290,10 +387,10 @@
     </div>
 
     <!--Confirmation de Compra-->
-    <div>
-        <h2>¡Orden realizada con Éxito!</h2>
-        <p>Hora de la Orden: <span>3horas</span></p>
-        <p>Tiempo Estimado de entrega: <span>Tiempo 30min</span></p>
+    <div class="flex alert-div display-none">
+        <h2 class="full-width">¡Orden realizada con Éxito!</h2>
+        <p class="full-width">Hora de la Orden: <span>3horas</span></p>
+        <p class="full-width">Tiempo Estimado de entrega: <span>Tiempo 30min</span></p>
     </div>
 
     <script src="script.js"></script>
