@@ -19,6 +19,12 @@ const successDiv = document.getElementById("success-div");
 const closeCartButton = document.getElementById("close-cart-button");
 const shoppingCartDiv = document.getElementById("shopping-cart-div");
 const shoppingCartIcon = document.getElementById("shopping-cart");
+const payButton = document.getElementById("pay-button");
+const finalModal = document.getElementById("final-modal");
+const finalModalCloseBtn = document.getElementById("final-close-button");
+const confirmationButton = document.getElementById("confirmation-button");
+const confirmatonDiv = document.getElementById("confirmation-div");
+const finalForm = document.getElementById("final-form");
 
 const inView = section => {
     let top = section.offsetTop;
@@ -82,6 +88,20 @@ shoppingCartIcon.addEventListener("click", function () {
 });
 closeCartButton.addEventListener("click", function () {
     shoppingCartDiv.classList.add("display-none");
+});
+payButton.addEventListener("click", function () {
+    finalModal.classList.remove("display-none");
+});
+finalModalCloseBtn.addEventListener("click", function () {
+    finalModal.classList.add("display-none");
+});
+confirmationButton.addEventListener("click", function () {
+    confirmatonDiv.classList.remove("display-none");
+    finalForm.reset();
+    finalModal.classList.add("display-none");
+    setTimeout(function () {
+        confirmatonDiv.classList.add("display-none");
+    }, 1000);
 });
 
 

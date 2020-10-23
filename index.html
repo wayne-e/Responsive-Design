@@ -133,10 +133,10 @@
             </article>
             <div class="contact-element">
                 <h3 class="full-width">Ingrese sus datos y <br> envíenos sus comentarios</h3>
-                <form action="" class="comments-form flex">
-                    <input class="comments-form-field" type="text" id="user-name" placeholder="Nombre Completo:">
-                    <input class="comments-form-field" type="email" id="user-email" placeholder="Correo Electrónico">
-                    <textarea class="comments-form-field" id="user-comments" cols="30"
+                <form action="" class="form-class flex">
+                    <input class="form-field" type="text" id="user-name" placeholder="Nombre Completo:">
+                    <input class="form-field" type="email" id="user-email" placeholder="Correo Electrónico">
+                    <textarea class="form-field" id="user-comments" cols="30"
                         rows="10">Sugerencia o Comentario</textarea>
                     <button type="submit" class="submit-button">Enviar</button>
                 </form>
@@ -333,66 +333,94 @@
                     <figcaption class="product-description">
                         <h4>NOMBRE</h4>
                         <p><span class="bold-span">Precio</span></p>
-                        <div class="flex button-container"><button type="button" class="remove-item">Quitar Producto</button></div>
+                        <div class="flex button-container"><button type="button" class="remove-item">Quitar
+                                Producto</button></div>
+                    </figcaption>
+                </figure>
+                <figure class="flex product-element">
+                    <img src="img/promo.jpg" alt="promocion" class="cart-image">
+                    <figcaption class="product-description">
+                        <h4>NOMBRE</h4>
+                        <p><span class="bold-span">Precio</span></p>
+                        <div class="flex button-container"><button type="button" class="remove-item">Quitar
+                                Producto</button></div>
+                    </figcaption>
+                </figure>
+                <figure class="flex product-element">
+                    <img src="img/promo.jpg" alt="promocion" class="cart-image">
+                    <figcaption class="product-description">
+                        <h4>NOMBRE</h4>
+                        <p><span class="bold-span">Precio</span></p>
+                        <div class="flex button-container"><button type="button" class="remove-item">Quitar
+                                Producto</button></div>
                     </figcaption>
                 </figure>
             </div>
             <div class="flex button-container">
                 <button id="close-cart-button" class="submit-button">Volver</button>
-                <button class="submit-button">Continuar</button>
+                <button class="submit-button" id="pay-button">Continuar</button>
             </div>
         </article>
     </div>
 
     <!--Final-Modal-->
-    <div class="display-none">
-        <h2>¡Ingresa tus Datos!</h2>
-        <div>
-            <p>Espacio para el arreglo de orden (objeto)</p>
-        </div>
-        <div>
-            <form action="">
-                <input type="text" id="" placeholder="Nombre Completo*">
-                <input type="tel" id="" pattern="[0-9]{4}-[0-9]{4}" placeholder="Número de Teléfono*">
-                <input type="email" id="" placeholder="Correo Electronico">
-                <label for="">Entrega en:</label>
-                <div>
-                    <label for="restaurant-delivery">Restaurante</label>
-                    <input type="radio" name="delivery" value="restaurant" id="restaurant-delivery">
-                    <label for="home-delivery">Domicilio</label>
-                    <input type="radio" name="delivery" value="home" id="home-delivery" checked>
-                </div>
-                <input type="text" id="" placeholder="Dirección Exacta">
-                <select id="delivery-time">
-                    <option value="0">Seleccione Hora Aproximada de Recibir Orden</option>
-                    <option value="1">1 hora</option>
-                    <option value="2">2 hora</option>
-                    <option value="3">3 hora</option>
-                    <option value="4">4 hora</option>
-                </select>
-                <label>Método de Pago:</label>
-                <div>
-                    <label for="card-method">Tarjeta de Crédito o Débito</label>
-                    <input type="radio" name="payment" value="card" id="card-method">
-                    <label for="cash-method">Efectivo (Al momento de la Entrega)</label>
-                    <input type="radio" name="payment" value="cash" id="cash-method" checked>
-                </div>
-                <input type="text" id="" placeholder="Tarjeta de Crédito o Débito">
-                <div>
-                    <button type="reset">Atrás</button>
-                    <button type="submit">Confirmar Compra</button>
-                </div>
-            </form>
+    <div id="final-modal" class="display-none">
+        <div class="black-background"></div>
+        <div class="flex product-viewer modal-position">
+            <h2>¡Ingresa tus Datos!</h2>
+            <div>
+                <form action="" class="form-class final-form" id="final-form">
+                    <input type="text" id="" placeholder="Nombre Completo*" class="form-field">
+                    <input type="tel" id="" pattern="[0-9]{4}-[0-9]{4}" placeholder="Número de Teléfono* (AAAA-AAAA)"
+                        class="form-field">
+                    <input type="email" id="" placeholder="Correo Electronico" class="form-field">
+                    <input type="text" id="" placeholder="Dirección Exacta" class="form-field">
+                    <label class="form-field bold-span form-label">Entrega en:</label>
+                    <div class="form-field">
+                        <label for="restaurant-delivery">Restaurante</label>
+                        <input type="radio" name="delivery" value="restaurant" id="restaurant-delivery">
+                    </div>
+                    <div class="form-field">
+                        <label for="home-delivery">Domicilio</label>
+                        <input type="radio" name="delivery" value="home" id="home-delivery" checked>
+                    </div>
+                    <select id="delivery-time" class="form-field display-none">
+                        <option value="0">Seleccione Hora Aproximada de Recibir Orden</option>
+                        <option value="1">1 hora</option>
+                        <option value="2">2 hora</option>
+                        <option value="3">3 hora</option>
+                        <option value="4">4 hora</option>
+                    </select>
+                    <label class="form-field bold-span form-label">Método de Pago:</label>
+
+                    <div class="form-field">
+                        <label for="card-method">Tarjeta de Crédito o Débito</label>
+                        <input type="radio" name="payment" value="card" id="card-method">
+                    </div>
+                    <div class="form-field">
+                        <label for="cash-method">Efectivo (Al momento de la Entrega)</label>
+                        <input type="radio" name="payment" value="cash" id="cash-method" checked>
+                    </div>
+
+                    <input type="text" id="" placeholder="Tarjeta de Crédito o Débito" class="form-field">
+                    <div class="flex full-width button-container">
+                        <button id="final-close-button" class="submit-button" type="reset">Atrás</button>
+                        <button id="confirmation-button" class="submit-button" type="submit">Confirmar Compra</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-
     <!--Confirmation de Compra-->
-    <div class="flex alert-div display-none">
-        <h2 class="full-width">¡Orden realizada con Éxito!</h2>
-        <p class="full-width">Hora de la Orden: <span>3horas</span></p>
-        <p class="full-width">Tiempo Estimado de entrega: <span>Tiempo 30min</span></p>
+    <div id="confirmation-div" class="display-none">
+        <div class="black-background"></div>
+        <div class="flex modal-position order-placed-div">
+            <h2 class="full-width">¡Orden realizada con Éxito!</h2>
+            <p class="full-width">Hora de la Orden: <span>Hora-orden</span></p>
+            <p class="full-width">Tiempo Estimado de entrega: <span>Tiempo 45min</span></p>
+            <p class="bold-span full-width">¡Gracias por preferirnos!</p>
+        </div>
     </div>
-
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/ef503248b8.js" crossorigin="anonymous"></script>
 </body>

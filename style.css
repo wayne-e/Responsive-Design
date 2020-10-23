@@ -257,7 +257,7 @@ section {
     padding: 10px;
 }
 
-.comments-form {
+.form-class {
     justify-content: center;
     width: 70%;
     margin: 20px auto;
@@ -266,7 +266,7 @@ section {
     border-radius: 15px;
 }
 
-.comments-form-field {
+.form-field {
     padding: 15px;
     border-radius: 5px;
     margin: 5px;
@@ -278,16 +278,17 @@ section {
     margin-top: 20px;
     width: 100px;
     height: 40px;
-    border: solid 2px wheat;
+    border: solid 2px gray;
     border-radius: 10px;
-    background-color: rgba(243, 146, 49, 0.596);
-    color: white;
+    background-color: rgb(221, 214, 214);
+    color: black;
     font-weight: bold;
     cursor: pointer;
 }
 
 .submit-button:hover {
-    border: solid 2px gray;
+    background-color: rgb(99, 96, 96);
+    color: white;
 }
 
 footer {
@@ -422,20 +423,35 @@ footer {
     bottom: 10%;
 }
 
-.cart-image{
+.cart-image {
     width: 20%;
     border-radius: 100%;
 }
 
-.remove-item{
+.remove-item {
     padding: 5px;
     background-color: rgb(204, 197, 197);
     border-radius: 10px;
     font-weight: bold;
 }
 
-.remove-item:hover{
+.remove-item:hover {
     background-color: rgb(192, 147, 147);
+}
+
+.final-form, .order-placed-div {
+    background-color: rgb(211, 206, 206);
+}
+
+.form-label {
+    margin: 0;
+}
+
+.order-placed-div {
+    padding: 10px;
+    width: 500px;
+    height: min-content;
+    border-radius: 15px;
 }
 
 @media (max-width: 1050px) {
@@ -471,6 +487,9 @@ footer {
     .product-viewer {
         width: 80%;
     }
+    .final-form {
+        width: 90%;
+    }
 }
 
 @media(max-width: 700px) {
@@ -493,7 +512,7 @@ footer {
     .product-description {
         width: 90%;
     }
-    .cart-image{
+    .cart-image {
         width: 35%;
     }
 }
