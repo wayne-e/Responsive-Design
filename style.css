@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-html {
+html, body {
     font-family: 'Nunito', sans-serif;
     scroll-behavior: smooth;
 }
@@ -13,16 +13,29 @@ h1, h2, h3, h4, p {
     margin: 10px;
 }
 
+h1, h2, h3, h4 {
+    text-transform: uppercase;
+}
+
 h1 {
-    font-size: 40px;
+    font-size: calc(1.5em + 1.5vw);
 }
 
 h2 {
-    font-size: 35px;
+    font-size: calc(1.15em + 1.15vw);
 }
 
 h3 {
-    font-size: 23px;
+    font-size: calc(0.8em + 0.8vw);
+}
+
+h4, p {
+    font-size: calc(0.7em + 0.7vw);
+}
+
+p {
+    text-align: justify;
+    text-align-last: center;
 }
 
 a {
@@ -80,7 +93,7 @@ a {
 .header-class {
     flex-wrap: nowrap;
     justify-content: space-between;
-    height: 70px;
+    height: 80px;
     padding: 0 5px;
     background: rgba(0, 0, 0, 0.9);
     color: wheat;
@@ -92,15 +105,26 @@ a {
     right: 0;
 }
 
-.logo-div, .shopping-cart-div, .main-navbar {
+.shopping-cart-div, .main-navbar {
     flex-wrap: nowrap;
     height: 100%;
     padding: 0 10px;
 }
 
+.logo-div {
+    flex-wrap: nowrap;
+    width: 40%;
+    height: 100%;
+}
+
 .logo-olympus {
-    height: 80%;
+    height: 90%;
+    width: auto;
     margin: 0 10px;
+}
+
+.big-logo-olympus {
+    width: 40%;
 }
 
 .main-navbar {
@@ -152,7 +176,7 @@ a {
 
 section {
     margin-bottom: 3px;
-    padding: 90px 0;
+    padding: 80px 0;
 }
 
 .home-section {
@@ -160,12 +184,13 @@ section {
     background-image: url("img/bg7.png");
     background-position: center center;
     background-size: cover;
-    margin-top: 70px;
-    padding-left: 10%;
+    padding-left: 50px;
+    padding-top: 90px;
 }
 
 .home-description-div {
     width: 45%;
+    height: min-content;
     background-color: rgb(161, 160, 160, 0.3);
     padding: 35px;
     border-radius: 15px;
@@ -203,11 +228,6 @@ section {
 .promo-figure:hover {
     background-color: rgb(129, 125, 125);
     transition: 100ms ease-in-out;
-}
-
-.promo-description {
-    text-align: justify;
-    text-align-last: center;
 }
 
 .promo-image {
@@ -294,7 +314,7 @@ section {
 footer {
     height: auto;
     padding: 30px 0;
-    background-color: rgb(80, 31, 31);
+    background-color: black;
 }
 
 .footer-element {
@@ -302,16 +322,11 @@ footer {
     margin: 10px auto;
 }
 
-.logo-olympus {
-    justify-content: center;
-    width: 100px;
-}
-
 /*Modal*/
 
 .modal-position {
     position: fixed;
-    top: 70px;
+    top: 80px;
     right: 0;
     left: 0;
     bottom: 10px;
@@ -494,7 +509,7 @@ footer {
 
 @media(max-width: 700px) {
     .logo-div {
-        width: 40%;
+        width: 30%;
     }
     .shopping-cart-div {
         justify-content: center;
