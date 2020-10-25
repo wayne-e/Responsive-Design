@@ -19,10 +19,12 @@ h1, h2, h3, h4 {
 
 h1 {
     font-size: calc(1.5em + 1.5vw);
+    text-shadow: 1px 1px 1px white;
 }
 
 h2 {
     font-size: calc(1.15em + 1.15vw);
+    text-shadow: 1px 1px 1px white;
 }
 
 h3 {
@@ -120,7 +122,7 @@ a {
 .logo-olympus {
     height: 90%;
     width: auto;
-    margin: 0 auto;
+    margin: 0 3px
 }
 
 .big-logo-olympus {
@@ -176,7 +178,7 @@ a {
 
 section {
     margin-bottom: 3px;
-    padding: 80px 0;
+    padding: 90px 0;
 }
 
 .home-section {
@@ -204,8 +206,6 @@ section {
 .promo-section {
     justify-content: center;
     background-color: white;
-    padding-left: 10%;
-    padding-right: 10%;
 }
 
 .promo-div {
@@ -214,44 +214,64 @@ section {
 }
 
 .promo-figure {
-    width: 250px;
-    height: 400px;
-    justify-content: center;
-    margin: 15px;
+    margin: 2px;
+    flex-wrap: nowrap;
+    width: 30%;
+    height: 200px;
     padding: 10px;
-    border: solid 1px gray;
-    border-radius: 15px;
-    background-color: rgb(190, 188, 188);
     cursor: pointer;
+    justify-content: left;
+    background-color: rgb(245, 241, 241);
 }
 
 .promo-figure:hover {
-    background-color: rgb(129, 125, 125);
+    background-color: brown;
+    color: white;
     transition: 100ms ease-in-out;
 }
 
+.figcaption-description {
+    height: 100%;
+    justify-content: center;
+    align-items: space-between;
+}
+
 .promo-image {
-    width: 200px;
+    width: 33%;
     height: auto;
     border-radius: 100px;
 }
 
 .products-section {
-    background-image: url("img/bg2.jpg");
+    background-image: url("img/fondo05.jpg");
+    background-color: rgb(171, 171, 194);
     background-size: cover;
     background-position: center center;
+    justify-content: center;
+}
+
+.foods-catalog {
+    background-image: linear-gradient( to right, rgba(102, 59, 42, 0.5), rgba(102, 59, 42, 0.5)), url("img/foods.jpg");
+}
+
+.drinks-catalog {
+    background-image:  url("img/drinks2.jpg");
+}
+
+.desserts-catalog {
+    background-image: linear-gradient( to right, rgba(102, 59, 42, 0.5), rgba(102, 59, 42, 0.5)), url("img/desserts.jpg");
 }
 
 .catalog-div {
     justify-content: center;
-    margin: 10px 10%;
-    height: 150px;
+    margin: 10px;
+    width: 20%;
+    height: 65vh;
     border: solid 2px #333333;
     border-radius: 15px;
-    background-image: url("img/marco2.jpg");
     background-size: cover;
     background-position: center center;
-    color: wheat;
+    color: black;
     cursor: pointer;
 }
 
@@ -388,13 +408,13 @@ footer {
     border-radius: 15px;
 }
 
+.product-element:hover {
+    background-color: rgb(245, 241, 241);
+}
+
 .product-description {
     width: 50%;
     margin: 5px;
-}
-
-.product-element:hover {
-    background-color: rgb(165, 163, 163);
 }
 
 .alert-div {
@@ -481,7 +501,7 @@ footer {
         position: absolute;
         top: 70px;
         right: 0;
-        background-color: #333333;
+        background: rgba(0, 0, 0, 0.9);
     }
     .nav-link {
         margin: 20px;
@@ -529,6 +549,21 @@ footer {
     }
     .cart-image {
         width: 35%;
+    }
+    .catalog-div {
+        width: 25%;
+    }
+    .promo-figure {
+        flex-wrap: wrap;
+        width: 45%;
+        height: 300px;
+        justify-content: center;
+    }
+    .figcaption-description {
+        height: auto;
+    }
+    .promo-image {
+        width: 60%;
     }
 }
 
