@@ -163,6 +163,7 @@
     <div id="all-products-catalog" class="display-none">
         <div class="black-background"></div>
         <div class="product-viewer modal-position">
+            <div class=" full-width relative-class"><i class="fas fa-window-close absolute-item close-modal-button"></i></div>
             <div id="food-div" class="display-none">
                 <h3>Elija entre nuestra variedad de <span class="bold-span">Comidas</span></h3>
                 <p>Seleccione un producto para ver detalles o agregar al carrito</p>
@@ -271,15 +272,14 @@
                     </figure>
                 </div>
             </div>
-            <div class="flex button-container">
-                <button id="close-catalog-button" class="submit-button">Atrás</button>
-            </div>
         </div>
     </div>
     <!--Modal producto-->
     <div id="product-div" class="display-none">
         <div class="black-background"></div>
         <article class="flex product-viewer modal-position">
+            <div class=" full-width relative-class"><i class="fas fa-window-close absolute-item close-modal-button"></i>
+            </div>
             <figure class="flex viewer-element">
                 <img src="img/promo.jpg" alt="promocion" class="viewer-image">
             </figure>
@@ -295,8 +295,7 @@
                         <p class="flex amount-buttons">1</p>
                         <button type="button" class="amount-buttons value-button">+</button>
                     </div>
-                    <div class="flex">
-                        <button id="back-product-btn" class="submit-button" type="reset">Volver</button>
+                    <div class="full-width button-container flex">
                         <button id="add-to-cart" class="submit-button" type="button">Agregar al Carrito</button>
                     </div>
                 </form>
@@ -327,6 +326,7 @@
     <div id="shopping-cart-div" class="display-none">
         <div class="black-background"></div>
         <article class="product-viewer modal-position shopping-cart">
+            <div class="relative-class"><i class="fas fa-window-close absolute-item close-modal-button"></i></div>
             <h3>Mis Productos</h3>
             <p>Click en Continuar para proceder con la compra</p>
             <div class="flex button-container">
@@ -335,8 +335,9 @@
                     <figcaption class="product-description">
                         <h4>NOMBRE</h4>
                         <p><span class="bold-span">Precio</span></p>
-                        <div class="flex button-container"><button type="button" class="remove-item">Quitar
-                                Producto</button></div>
+                    </figcaption>
+                    <figcaption>
+                        <i class="fas fa-times-circle"></i>
                     </figcaption>
                 </figure>
                 <figure class="flex product-element">
@@ -344,8 +345,9 @@
                     <figcaption class="product-description">
                         <h4>NOMBRE</h4>
                         <p><span class="bold-span">Precio</span></p>
-                        <div class="flex button-container"><button type="button" class="remove-item">Quitar
-                                Producto</button></div>
+                    </figcaption>
+                    <figcaption>
+                        <i class="fas fa-times-circle"></i>
                     </figcaption>
                 </figure>
                 <figure class="flex product-element">
@@ -353,13 +355,13 @@
                     <figcaption class="product-description">
                         <h4>NOMBRE</h4>
                         <p><span class="bold-span">Precio</span></p>
-                        <div class="flex button-container"><button type="button" class="remove-item">Quitar
-                                Producto</button></div>
+                    </figcaption>
+                    <figcaption>
+                        <i class="fas fa-times-circle"></i>
                     </figcaption>
                 </figure>
             </div>
             <div class="flex button-container">
-                <button id="close-cart-button" class="submit-button">Volver</button>
                 <button class="submit-button" id="pay-button">Continuar</button>
             </div>
         </article>
@@ -369,6 +371,8 @@
     <div id="final-modal" class="display-none">
         <div class="black-background"></div>
         <div class="flex product-viewer modal-position">
+            <div class="full-width relative-class"><i class="fas fa-window-close absolute-item close-modal-button"></i>
+            </div>
             <h2>¡Ingresa tus Datos!</h2>
             <div>
                 <form action="" class="form-class final-form" id="final-form">
@@ -406,7 +410,6 @@
 
                     <input type="text" id="" placeholder="Tarjeta de Crédito o Débito" class="form-field">
                     <div class="flex full-width button-container">
-                        <button id="final-close-button" class="submit-button" type="reset">Atrás</button>
                         <button id="confirmation-button" class="submit-button" type="submit">Confirmar Compra</button>
                     </div>
                 </form>

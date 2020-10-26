@@ -66,7 +66,11 @@ a {
 }
 
 .fas:hover, .fab:hover {
-    color: rgb(211, 149, 33);
+    color: wheat;
+}
+
+.fa-times-circle, .fa-window-close{
+    color: brown;
 }
 
 .bold-span {
@@ -88,6 +92,16 @@ a {
 
 .display-none {
     display: none;
+}
+
+.relative-class{
+    position: relative;
+}
+
+.absolute-item{
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }
 
 /*HEADER Y SUS ELEMENTOS*/
@@ -239,7 +253,7 @@ section {
 .promo-image {
     width: 33%;
     height: auto;
-    border-radius: 100px;
+    border-radius: 20px;
 }
 
 .products-section {
@@ -316,19 +330,20 @@ section {
 .submit-button {
     margin: 0 10px;
     margin-top: 20px;
-    width: 100px;
+    padding: 3px;
+    width: 120px;
     height: 40px;
     border: solid 2px gray;
     border-radius: 10px;
-    background-color: rgb(221, 214, 214);
-    color: black;
+    background-color: brown;
+    color: white;
     font-weight: bold;
     cursor: pointer;
 }
 
 .submit-button:hover {
-    background-color: rgb(99, 96, 96);
-    color: white;
+    background-color: rgb(175, 73, 73);
+    border: solid 2px rgb(163, 161, 161);
 }
 
 footer {
@@ -404,8 +419,8 @@ footer {
     justify-content: center;
     width: 80%;
     padding: 10px 0;
-    border-bottom: solid 1px #333333;
-    border-radius: 15px;
+    border-bottom: solid 1px brown;
+    cursor: pointer;
 }
 
 .product-element:hover {
@@ -460,7 +475,7 @@ footer {
 
 .cart-image {
     width: 20%;
-    border-radius: 100%;
+    border-radius: 20px;
 }
 
 .remove-item {

@@ -5,7 +5,7 @@ const mainNavbar = document.getElementById("navbar");
 const navLinks = document.getElementsByClassName("nav-link");
 const productDiv = document.getElementById("product-div");
 const productElement = document.getElementsByClassName("product-item");
-const backProductButton = document.getElementById("back-product-btn");
+//const backProductButton = document.getElementById("back-product-btn");
 const foodCatalog = document.getElementById("food-catalog");
 const drinkCatalog = document.getElementById("drink-catalog");
 const dessertCatalog = document.getElementById("dessert-catalog");
@@ -13,18 +13,19 @@ const allProductsCatalog = document.getElementById("all-products-catalog");
 const foodDiv = document.getElementById("food-div");
 const drinkDiv = document.getElementById("drink-div");
 const dessertDiv = document.getElementById("dessert-div");
-const closeCatalogButton = document.getElementById("close-catalog-button");
+//const closeCatalogButton = document.getElementById("close-catalog-button");
 const addtoCar = document.getElementById("add-to-cart");
 const successDiv = document.getElementById("success-div");
-const closeCartButton = document.getElementById("close-cart-button");
+//const closeCartButton = document.getElementById("close-cart-button");
 const shoppingCartDiv = document.getElementById("shopping-cart-div");
 const shoppingCartIcon = document.getElementById("shopping-cart");
 const payButton = document.getElementById("pay-button");
 const finalModal = document.getElementById("final-modal");
-const finalModalCloseBtn = document.getElementById("final-close-button");
+//const finalModalCloseBtn = document.getElementById("final-close-button");
 const confirmationButton = document.getElementById("confirmation-button");
 const confirmatonDiv = document.getElementById("confirmation-div");
 const finalForm = document.getElementById("final-form");
+const closeModal = document.getElementsByClassName("close-modal-button");
 
 const inView = section => {
     let top = section.offsetTop;
@@ -54,11 +55,11 @@ window.onscroll = () => {
 barsIcon.addEventListener("click", function () {
     mainNavbar.classList.toggle("display-bar");
 });
-
+/*
 backProductButton.addEventListener("click", function () {
     productDiv.classList.add("display-none");
 });
-
+*/
 foodCatalog.addEventListener("click", function () {
     allProductsCatalog.classList.remove("display-none");
     foodDiv.classList.remove("display-none");
@@ -71,12 +72,12 @@ dessertCatalog.addEventListener("click", function () {
     allProductsCatalog.classList.remove("display-none");
     dessertDiv.classList.remove("display-none");
 });
-closeCatalogButton.addEventListener("click", function () {
+/*closeCatalogButton.addEventListener("click", function () {
     foodDiv.classList.add("display-none");
     drinkDiv.classList.add("display-none");
     dessertDiv.classList.add("display-none");
     allProductsCatalog.classList.add("display-none");
-});
+});*/
 addtoCar.addEventListener("click", function () {
     successDiv.classList.remove("display-none");
     setTimeout(function () {
@@ -86,15 +87,15 @@ addtoCar.addEventListener("click", function () {
 shoppingCartIcon.addEventListener("click", function () {
     shoppingCartDiv.classList.remove("display-none");
 });
-closeCartButton.addEventListener("click", function () {
+/*closeCartButton.addEventListener("click", function () {
     shoppingCartDiv.classList.add("display-none");
-});
+});*/
 payButton.addEventListener("click", function () {
     finalModal.classList.remove("display-none");
 });
-finalModalCloseBtn.addEventListener("click", function () {
+/*finalModalCloseBtn.addEventListener("click", function () {
     finalModal.classList.add("display-none");
-});
+});*/
 confirmationButton.addEventListener("click", function () {
     confirmatonDiv.classList.remove("display-none");
     finalForm.reset();
@@ -115,4 +116,14 @@ for (i = 0; i < productElement.length; i++) {
     productElement[i].addEventListener("click", function () {
         productDiv.classList.remove("display-none");
     });
+}
+
+for(i=0; closeModal.length;i++){
+    closeModal[i].addEventListener("click", function(event){
+        closeParent(event.target);
+    });
+}
+
+function closeParent(element) {
+    element.parentNode.parentNode.parentNode.classList.add("display-none");
 }
