@@ -100,8 +100,8 @@ a {
 
 .absolute-item{
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 2px;
+    right: 2px;
 }
 
 /*HEADER Y SUS ELEMENTOS*/
@@ -478,17 +478,6 @@ footer {
     border-radius: 20px;
 }
 
-.remove-item {
-    padding: 5px;
-    background-color: rgb(204, 197, 197);
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-.remove-item:hover {
-    background-color: rgb(192, 147, 147);
-}
-
 .final-form, .order-placed-div {
     background-color: rgb(211, 206, 206);
 }
@@ -581,6 +570,10 @@ footer {
     .promo-image {
         width: 60%;
     }
+    .final-modal-div{
+        width: 90%;
+    }
+    
 }
 
 .display-bar {
