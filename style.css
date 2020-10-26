@@ -255,7 +255,7 @@ section {
 }
 
 .drinks-catalog {
-    background-image:  url("img/drinks2.jpg");
+    background-image: url("img/drinks2.jpg");
 }
 
 .desserts-catalog {
@@ -551,7 +551,8 @@ footer {
         width: 35%;
     }
     .catalog-div {
-        width: 25%;
+        width: 90%;
+        height: 150px;
     }
     .promo-figure {
         flex-wrap: wrap;
