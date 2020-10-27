@@ -22,6 +22,9 @@ const confirmationButton = document.getElementById("confirmation-button");
 const confirmatonDiv = document.getElementById("confirmation-div");
 const finalForm = document.getElementById("final-form");
 const closeModal = document.getElementsByClassName("close-modal-button");
+const amountButtons = document.getElementsByClassName("value-button");
+const amountText = document.getElementById("amount-text");
+let amount = 1;
 
 const inView = section => {
     let top = section.offsetTop;
@@ -97,9 +100,15 @@ for (i = 0; i < productElement.length; i++) {
     });
 }
 
-for (i = 0; closeModal.length; i++) {
+for (i = 0; i < closeModal.length; i++) {
     closeModal[i].addEventListener("click", function (event) {
         closeParent(event.target);
+    });
+}
+
+for (i = 0; i < amountButtons.length; i++) {
+    amountButtons[i].addEventListener("click", function (event) {
+        editAmount(event);
     });
 }
 
@@ -111,4 +120,21 @@ function closeParent(element) {
         drinkDiv.classList.add("display-none");
         dessertDiv.classList.add("display-none");
     }
+    else if (parent.getAttribute("id") === "product-div") {
+        amount = 1;
+        amountText.innerText = amount;
+    }
+}
+
+function editAmount(event) {
+    amount = parseInt(amountText.innerText);
+    let buttonValue = event.target.innerText;
+    if (buttonValue === "+") {
+        amount++;
+    } else {
+        if (amount !== 1) {
+            amount--;
+        }
+    }
+    amountText.innerText = amount;
 }
