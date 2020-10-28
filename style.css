@@ -79,6 +79,11 @@ a {
 
 .wheat-span {
     color: wheat;
+    text-shadow: -1px -1px 1px #333333;
+}
+
+.brown-span{
+    color: brown;
 }
 
 .black-background {
@@ -112,6 +117,7 @@ a {
     height: 80px;
     padding: 0 5px;
     background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 1px 5px #111;
     color: wheat;
     font-size: 20px;
     font-weight: bolder;
@@ -331,19 +337,20 @@ section {
     margin: 0 10px;
     margin-top: 20px;
     padding: 3px;
-    width: 120px;
-    height: 40px;
-    border: solid 2px gray;
+    width: 150px;
+    height: 50px;
+    border-style: none;
     border-radius: 10px;
     background-color: brown;
     color: white;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
 }
 
 .submit-button:hover {
     background-color: rgb(175, 73, 73);
-    border: solid 2px rgb(163, 161, 161);
+    border: solid 2px brown;
 }
 
 footer {
@@ -407,7 +414,7 @@ footer {
 
 .value-button {
     cursor: pointer;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: rgb(158, 154, 154);
 }
 

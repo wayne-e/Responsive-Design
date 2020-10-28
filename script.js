@@ -1,3 +1,8 @@
+import { foodsArray, Product, drinksArray, dessertsArray } from './products.js';
+
+
+
+
 const sections = [...document.querySelectorAll('section')];
 const getLinkById = id => document.querySelector(`a[href='#${id}']`);
 const barsIcon = document.getElementById("bars-icon")
@@ -24,7 +29,36 @@ const finalForm = document.getElementById("final-form");
 const closeModal = document.getElementsByClassName("close-modal-button");
 const amountButtons = document.getElementsByClassName("value-button");
 const amountText = document.getElementById("amount-text");
-let amount = 1;
+const foodElementsDiv = document.getElementById("food-elements-div");
+const drinkElementsDiv = document.getElementById("drink-elements-div");
+const dessertElementsDiv = document.getElementById("dessert-elements-div");
+let amount = 1, i = 0, foodElements = "", drinkElements = "", dessertElement = "", productAmount = 4;
+
+/*CONSTRUCCION DE ELEMENTOS HTML - >>Asumimos que solo habrán cuatro productos por Categoría<<*/
+
+for (i = 0; i < productAmount; i++) {
+    foodElements += foodsArray[i].createCatalogElement();
+    drinkElements += drinksArray[i].createCatalogElement();
+    dessertElement += dessertsArray[i].createCatalogElement();
+}
+foodElementsDiv.innerHTML = foodElements;
+drinkElementsDiv.innerHTML = drinkElements;
+dessertElementsDiv.innerHTML = dessertElement;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const inView = section => {
     let top = section.offsetTop;
