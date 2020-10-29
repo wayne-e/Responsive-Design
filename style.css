@@ -109,6 +109,10 @@ a {
     right: 2px;
 }
 
+.product-item * {
+    pointer-events: none;
+}
+
 /*HEADER Y SUS ELEMENTOS*/
 
 .header-class {
@@ -393,6 +397,7 @@ footer {
 .viewer-element {
     width: 45%;
     justify-content: center;
+    margin: 10px;
 }
 
 .product-container {

@@ -32,9 +32,14 @@ const foodElementsDiv = document.getElementById("food-elements-div");
 const drinkElementsDiv = document.getElementById("drink-elements-div");
 const dessertElementsDiv = document.getElementById("dessert-elements-div");
 const promotionsDiv = document.getElementById("promo-div");
-let amount = 1, i = 0, foodElements = "", drinkElements = "", dessertElement = "", promoElements = "", productAmount = 4;
+const selectedProductImage = document.getElementById("selected-product-image");
+const selectedProductName = document.getElementById("selected-product-name");
+const selectedProductDescription = document.getElementById("selected-product-description");
+const selectedProductPrice = document.getElementById("selected-product-price");
 
-/*CONSTRUCCION DE ELEMENTOS HTML - >>Asumimos que solo habrán cuatro productos por Categoría<<*/
+let amount = 1, i = 0, foodElements = "", drinkElements = "", dessertElement = "", promoElements = "", productAmount = 4, selectedProduct, productPrice = 0;
+
+/*CONSTRUCCION DE ELEMENTOS HTML - >>Asumimos que solo habrán Cuatro productos por Categoría, Seis Promociones<<*/
 
 for (i = 0; i < promoArray.length; i++) {
     promoElements += promoArray[i].createPromotionElement();
@@ -51,21 +56,7 @@ foodElementsDiv.innerHTML = foodElements;
 drinkElementsDiv.innerHTML = drinkElements;
 dessertElementsDiv.innerHTML = dessertElement;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+///////
 const inView = section => {
     let top = section.offsetTop;
     let height = section.offsetHeight;
@@ -106,6 +97,8 @@ dessertCatalog.addEventListener("click", function () {
     allProductsCatalog.classList.remove("display-none");
     dessertDiv.classList.remove("display-none");
 });
+
+//Agregar Al Carrito
 addtoCar.addEventListener("click", function () {
     successDiv.classList.remove("display-none");
     setTimeout(function () {
@@ -135,7 +128,12 @@ for (i = 0; i < navLinks.length; i++) {
 }
 
 for (i = 0; i < productElement.length; i++) {
-    productElement[i].addEventListener("click", function () {
+    productElement[i].addEventListener("click", function (event) {
+        assignElement(event.target);
+        selectedProductImage.setAttribute("src", selectedProduct.image);
+        selectedProductName.innerText = selectedProduct.name;
+        selectedProductDescription.innerText = selectedProduct.description;
+        selectedProductPrice.innerText = `$${selectedProduct.price.toFixed(2)}`;
         productDiv.classList.remove("display-none");
     });
 }
@@ -176,5 +174,33 @@ function editAmount(event) {
             amount--;
         }
     }
+    productPrice = selectedProduct.price * amount;
     amountText.innerText = amount;
+    selectedProductPrice.innerText = `$${productPrice.toFixed(2)}`;
+
+}
+
+function assignElement(selectedElement) {
+    let selectedItemId = selectedElement.getAttribute("id");
+    for (i = 0; i < promoArray.length; i++) {
+        if (selectedItemId === promoArray[i].id) {
+            selectedProduct = promoArray[i];
+            return;
+        }
+    }
+
+    for (i = 0; i < productAmount; i++) {
+        if (selectedItemId === foodsArray[i].id) {
+            selectedProduct = foodsArray[i];
+            return;
+        }
+        else if (selectedItemId === drinksArray[i].id) {
+            selectedProduct = drinksArray[i];
+            return;
+        }
+        else if (selectedItemId === dessertsArray[i].id) {
+            selectedProduct = dessertsArray[i];
+            return;
+        }
+    }
 }

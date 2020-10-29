@@ -8,11 +8,15 @@ class Product {
         this._productImage = productImage;
     }
 
-    get productName() {
+    get id(){
+        return this._productId;
+    }
+
+    get name() {
         return this._productName
     }
 
-    get productDescription() {
+    get description() {
         return this._productDescription
     }
 
@@ -20,11 +24,11 @@ class Product {
         return this._productDetails
     }
 
-    get productPrice() {
+    get price() {
         return this._productPrice
     }
 
-    get productImage() {
+    get image() {
         return this._productImage
     }
 
