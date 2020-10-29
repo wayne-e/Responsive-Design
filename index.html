@@ -29,7 +29,8 @@
     <main class="flex full-width">
         <section id="home" class="flex full-width home-section">
             <div class="home-description-div">
-                <figure class="flex full-width home-section-logo"><img src="img/LOGO5.png" alt="logo-olympus" class="big-logo-olympus"></figure>
+                <figure class="flex full-width home-section-logo"><img src="img/LOGO5.png" alt="logo-olympus"
+                        class="big-logo-olympus"></figure>
                 <h1>Olympus | Restaurante</h1>
                 <h2>Otro nivel para tu Paladar</h2>
                 <p class="wheat-span">
@@ -52,56 +53,7 @@
         <section id="promo" class="flex full-width promo-section">
             <h2 class="full-width">Promociones</h2>
             <p class="full-width">Elija entre nuestros fabulosos <span class="bold-span">Combos</span> en Promoción</p>
-            <div class="flex full-width promo-div">
-                <figure class="flex promo-figure product-item">
-                    <img src="img/promo.jpg" alt="promocion" class="promo-image">
-                    <figcaption class="flex figcaption-description">
-                        <h4 class="full-width">NOMBRE</h4>
-                        <p class="full-width">Hamburguesa MegaOlimpica + MegaPapas + SodaHeroica</p>
-                        <p class="full-width"><span class="bold-span">Precio</span></p>
-                    </figcaption>
-                </figure>
-                <figure class="flex promo-figure product-item">
-                    <img src="img/promo.jpg" alt="promocion" class="promo-image">
-                    <figcaption class="flex figcaption-description">
-                        <h4 class="full-width">NOMBRE</h4>
-                        <p class="full-width">Hamburguesa Doble + MegaPapas + SodaHeroica</p>
-                        <p class="full-width"><span class="bold-span">Precio</span></p>
-                    </figcaption>
-                </figure>
-                <figure class="flex promo-figure product-item">
-                    <img src="img/promo.jpg" alt="promocion" class="promo-image">
-                    <figcaption class="flex figcaption-description">
-                        <h4 class="full-width">NOMBRE</h4>
-                        <p class="full-width">Hamburguesa Doble + MegaPapas + SodaHeroica</p>
-                        <p class="full-width"><span class="bold-span">Precio</span></p>
-                    </figcaption>
-                </figure>
-                <figure class="flex promo-figure product-item">
-                    <img src="img/promo.jpg" alt="promocion" class="promo-image">
-                    <figcaption class="flex figcaption-description">
-                        <h4 class="full-width">NOMBRE</h4>
-                        <p class="full-width">Hamburguesa Doble + MegaPapas + SodaHeroica</p>
-                        <p class="full-width"><span class="bold-span">Precio</span></p>
-                    </figcaption>
-                </figure>
-                <figure class="flex promo-figure product-item">
-                    <img src="img/promo.jpg" alt="promocion" class="promo-image">
-                    <figcaption class="flex figcaption-description">
-                        <h4 class="full-width">NOMBRE</h4>
-                        <p class="full-width">Hamburguesa Doble + MegaPapas + SodaHeroica</p>
-                        <p class="full-width"><span class="bold-span">Precio</span></p>
-                    </figcaption>
-                </figure>
-                <figure class="flex promo-figure product-item">
-                    <img src="img/promo.jpg" alt="promocion" class="promo-image">
-                    <figcaption class="flex figcaption-description">
-                        <h4 class="full-width">NOMBRE</h4>
-                        <p class="full-width">Hamburguesa Doble + MegaPapas + SodaHeroica</p>
-                        <p class="full-width"><span class="bold-span">Precio</span></p>
-                    </figcaption>
-                </figure>
-            </div>
+            <div id="promo-div" class="flex full-width promo-div"></div>
         </section>
         <section id="products" class="flex full-width products-section">
             <h2 class="full-width">Nuestros Productos</h2>
@@ -163,11 +115,12 @@
     <div id="all-products-catalog" class="display-none">
         <div class="black-background"></div>
         <div class="product-viewer modal-position">
-            <div class=" full-width relative-class"><i class="fas fa-window-close absolute-item close-modal-button"></i></div>
+            <div class=" full-width relative-class"><i class="fas fa-window-close absolute-item close-modal-button"></i>
+            </div>
             <div id="food-div" class="display-none">
                 <h3>Comidas</h3>
                 <p class="brown-span">Seleccione un producto para ver detalles o agregar al carrito</p>
-                <div id="food-elements-div" class="flex button-container">                     
+                <div id="food-elements-div" class="flex button-container">
                 </div>
             </div>
             <div id="drink-div" class="display-none">
@@ -337,6 +290,7 @@
         </div>
     </div>
     <script type="module" src="script.js"></script>
+    <script type="module" src="promo.js"></script>
     <script src="https://kit.fontawesome.com/ef503248b8.js" crossorigin="anonymous"></script>
 </body>
 

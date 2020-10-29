@@ -1,6 +1,5 @@
 import { foodsArray, Product, drinksArray, dessertsArray } from './products.js';
-
-
+import { promoArray, Promotion } from './promo.js';
 
 
 const sections = [...document.querySelectorAll('section')];
@@ -32,9 +31,16 @@ const amountText = document.getElementById("amount-text");
 const foodElementsDiv = document.getElementById("food-elements-div");
 const drinkElementsDiv = document.getElementById("drink-elements-div");
 const dessertElementsDiv = document.getElementById("dessert-elements-div");
-let amount = 1, i = 0, foodElements = "", drinkElements = "", dessertElement = "", productAmount = 4;
+const promotionsDiv = document.getElementById("promo-div");
+let amount = 1, i = 0, foodElements = "", drinkElements = "", dessertElement = "", promoElements = "", productAmount = 4;
 
 /*CONSTRUCCION DE ELEMENTOS HTML - >>Asumimos que solo habrán cuatro productos por Categoría<<*/
+
+for (i = 0; i < promoArray.length; i++) {
+    promoElements += promoArray[i].createPromotionElement();
+}
+promotionsDiv.innerHTML = promoElements;
+
 
 for (i = 0; i < productAmount; i++) {
     foodElements += foodsArray[i].createCatalogElement();
