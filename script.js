@@ -36,9 +36,20 @@ const selectedProductImage = document.getElementById("selected-product-image");
 const selectedProductName = document.getElementById("selected-product-name");
 const selectedProductDescription = document.getElementById("selected-product-description");
 const selectedProductPrice = document.getElementById("selected-product-price");
+const productsInCar = document.getElementById("products-in-cart");
+const finalAmountHeader = document.getElementById("final-amount");
+let amount = 1, i = 0, foodElements = "", drinkElements = "", dessertElement = "", promoElements = "";
+let productAmount = 4, selectedProduct, productPrice = 0, finalAmount = 0;
+let shoppingCartArray = [], element;
 
-let amount = 1, i = 0, foodElements = "", drinkElements = "", dessertElement = "", promoElements = "", productAmount = 4, selectedProduct, productPrice = 0;
-
+///VERIFICAR SI HAY ELEMENTOS EN LOCAL STORAGE AL INICIAR SESIÓN
+/*
+if(localStorage.getItem("shoppingCartContent")){
+    shoppingCartArray = JSON.parse(localStorage.getItem("shoppingCartContent"));
+    finalAmount = localStorage.getItem("finalAmount");
+    alert(shoppingCartArray);
+}
+*/
 /*CONSTRUCCION DE ELEMENTOS HTML - >>Asumimos que solo habrán Cuatro productos por Categoría, Seis Promociones<<*/
 
 for (i = 0; i < promoArray.length; i++) {
@@ -100,6 +111,14 @@ dessertCatalog.addEventListener("click", function () {
 
 //Agregar Al Carrito
 addtoCar.addEventListener("click", function () {
+    payButton.removeAttribute("disabled");
+    for (i = 0; i < amount; i++) {
+        shoppingCartArray.push(selectedProduct);
+    }
+    updateShoppingCart();
+    productDiv.classList.add("display-none");
+    amount = 1;
+    amountText.innerText = amount;
     successDiv.classList.remove("display-none");
     setTimeout(function () {
         successDiv.classList.add("display-none");
@@ -130,6 +149,7 @@ for (i = 0; i < navLinks.length; i++) {
 for (i = 0; i < productElement.length; i++) {
     productElement[i].addEventListener("click", function (event) {
         assignElement(event.target);
+        productPrice = selectedProduct.price;
         selectedProductImage.setAttribute("src", selectedProduct.image);
         selectedProductName.innerText = selectedProduct.name;
         selectedProductDescription.innerText = selectedProduct.description;
@@ -165,7 +185,6 @@ function closeParent(element) {
 }
 
 function editAmount(event) {
-    amount = parseInt(amountText.innerText);
     let buttonValue = event.target.innerText;
     if (buttonValue === "+") {
         amount++;
@@ -203,4 +222,32 @@ function assignElement(selectedElement) {
             return;
         }
     }
+}
+
+function updateShoppingCart() {
+    let template = "";
+    finalAmount = 0;
+    for (i = shoppingCartArray.length; i > 0; i--) {
+        template += `${shoppingCartArray[i - 1].createShoppingCartElement(i - 1)}`;
+        finalAmount += shoppingCartArray[i - 1].price;
+    }
+    if (shoppingCartArray.length === 0) {
+        payButton.setAttribute("disabled", "");
+    }
+    productsInCar.innerHTML = template;
+    finalAmountHeader.innerText = `$${finalAmount.toFixed(2)}`;
+    for (i = shoppingCartArray.length; i > 0; i--) {
+        element = document.getElementById(`${i - 1}`);
+        element.addEventListener("click", function (event) {
+            closeElement(event.target);
+        });
+    }
+    localStorage.setItem("shoppingCartContent", JSON.stringify(shoppingCartArray));
+    localStorage.setItem("finalAmount", finalAmount);
+}
+
+function closeElement(toCloseElement) {
+    let elementId = parseInt(toCloseElement.getAttribute("id"));
+    shoppingCartArray.splice(elementId, 1);
+    updateShoppingCart();
 }

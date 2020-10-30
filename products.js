@@ -46,7 +46,7 @@ class Product {
         return htmlElement;
     }
 
-    createShoppingCartElement() {
+    createShoppingCartElement(id) {
         let htmlElement = `
         <figure class="flex product-element">
             <img src="${this._productImage}" alt="promocion" class="cart-image">
@@ -55,7 +55,7 @@ class Product {
                     <p><span class="bold-span">$${this._productPrice.toFixed(2)}</span></p>
                 </figcaption>
                 <figcaption>
-                    <i class="fas fa-times-circle"></i>
+                    <i id="${id}" class="fas fa-times-circle"></i>
                 </figcaption>
         </figure>
         `;

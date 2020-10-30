@@ -352,9 +352,14 @@ section {
     cursor: pointer;
 }
 
-.submit-button:hover {
+.submit-button:enabled:hover {
     background-color: rgb(175, 73, 73);
     border: solid 2px brown;
+}
+
+.submit-button:disabled{
+    opacity: 0.2;
+    cursor: default;
 }
 
 footer {
@@ -396,12 +401,13 @@ footer {
 
 .viewer-element {
     width: 45%;
+    height: 100%;
     justify-content: center;
     margin: 10px;
 }
 
 .product-container {
-    bottom: 15vh;
+    bottom: 5vh;
 }
 
 .button-container {
@@ -535,6 +541,9 @@ footer {
     }
     .comments-description-element {
         width: 90%;
+    }
+    .viewer-element {
+        height: min-content;
     }
     .product-viewer {
         width: 80%;

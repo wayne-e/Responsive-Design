@@ -47,6 +47,22 @@ class Promotion extends Product {
         return htmlElement;
     }
 
+    createShoppingCartElement(id) {
+        let htmlElement = `
+        <figure class="flex product-element">
+            <img src="${this._promoImage}" alt="promocion" class="cart-image">
+                <figcaption class="product-description">
+                    <h4>${this._promoName}</h4>
+                    <p><span class="bold-span">$${this._promoPrice.toFixed(2)}</span></p>
+                </figcaption>
+                <figcaption>
+                    <i id="${id}" class="fas fa-times-circle"></i>
+                </figcaption>
+        </figure>
+        `;
+        return htmlElement;
+    }
+
 }
 
 let promo01 = new Promotion("promo01", foodsArray[0], drinksArray[0], dessertsArray[0], "Poder Olímpico", "img/promo.jpg");
