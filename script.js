@@ -38,8 +38,16 @@ const selectedProductDescription = document.getElementById("selected-product-des
 const selectedProductPrice = document.getElementById("selected-product-price");
 const productsInCar = document.getElementById("products-in-cart");
 const finalAmountHeader = document.getElementById("final-amount");
+const userName = document.getElementById("user-name");
+const userPhone = document.getElementById("user-phone");
+const userEmail = document.getElementById("user-email");
+const userAdress = document.getElementById("user-adress");
+const userCard = document.getElementById("user-card");
+const currentTimeSpan = document.getElementById("current-time");
+const errorMessage = document.getElementById("error-message");
+const errorDiv = document.getElementById("error-div");
 let amount = 1, i = 0, foodElements = "", drinkElements = "", dessertElement = "", promoElements = "";
-let productAmount = 4, selectedProduct, productPrice = 0, finalAmount = 0;
+let productAmount = 4, selectedProduct, productPrice = 0, finalAmount = 0, currentTime, currentDate;
 let shoppingCartArray = [], element;
 
 ///VERIFICAR SI HAY ELEMENTOS EN LOCAL STORAGE AL INICIAR SESIÓN
@@ -131,12 +139,52 @@ payButton.addEventListener("click", function () {
     finalModal.classList.remove("display-none");
 });
 confirmationButton.addEventListener("click", function () {
+    
+    let user = userName.value, phone = userPhone.value, email = userEmail.value, adress = userAdress.value, card = userCard.value;
+    if (user === "" || phone === "" || email === "" || adress === "" || card === "") {
+        displayError("Favor Llenar Todos los Campos");
+        return;
+    }
+    if (phone.length !== 8) {
+        displayError("Ingrese un número de Teléfono Válido");
+        return;
+    }
+    if (Number.isInteger(parseInt(card))) {
+        let arrayCard = [], j = 0, number = "", newNumber, counter = 0;
+        for (i = card.length; i > 0; i--) {
+            arrayCard.push(parseInt(card[i - 1]));
+            if (j % 2 !== 0) {
+                arrayCard[j] *= 2;
+                if (arrayCard[j] >= 10) {
+                    number = "" + arrayCard[j];
+                    newNumber = parseInt(number[0]) + parseInt(number[1]);
+                    arrayCard[j] = newNumber;
+                }
+            }
+            counter += arrayCard[j];
+            j++;
+        }
+        if (counter % 10 !== 0) {
+            displayError("Ingrese una Tarjeta Válida");
+            return;
+        }
+
+    }
+    else {
+        displayError("Ingrese una Tarjeta Válida");
+        return;
+    }
+
+    currentTime = getCurrentTime();
+    currentTimeSpan.innerText = currentTime;
     confirmatonDiv.classList.remove("display-none");
-    finalForm.reset();
+    shoppingCartDiv.classList.add("display-none");
     finalModal.classList.add("display-none");
+    finalForm.reset();
     setTimeout(function () {
         confirmatonDiv.classList.add("display-none");
     }, 2500);
+
 });
 
 
@@ -250,4 +298,31 @@ function closeElement(toCloseElement) {
     let elementId = parseInt(toCloseElement.getAttribute("id"));
     shoppingCartArray.splice(elementId, 1);
     updateShoppingCart();
+}
+
+function displayError(message) {
+    errorMessage.innerText = message;
+    errorDiv.classList.remove("display-none");
+    setTimeout(function () {
+        errorDiv.classList.add("display-none");
+    }, 2000);
+}
+
+function getCurrentTime() {
+    let hour, minutes, seconds;
+    currentDate = new Date();
+    hour = currentDate.getHours();
+    minutes = currentDate.getMinutes();
+    seconds = currentDate.getSeconds();
+    if (hour < 10) {
+        hour = "0" + hour;
+    }
+    if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+    if (seconds < 10) {
+        seconds = "0" + seconds;
+    }
+
+    return `${hour} : ${minutes} : ${seconds}`;
 }
