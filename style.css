@@ -598,6 +598,9 @@ footer {
     .final-modal-div {
         width: 90%;
     }
+    .order-placed-div{
+        width: 100%;
+    }
 }
 
 .display-bar {

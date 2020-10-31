@@ -48,16 +48,31 @@ const errorMessage = document.getElementById("error-message");
 const errorDiv = document.getElementById("error-div");
 let amount = 1, i = 0, foodElements = "", drinkElements = "", dessertElement = "", promoElements = "";
 let productAmount = 4, selectedProduct, productPrice = 0, finalAmount = 0, currentTime, currentDate;
-let shoppingCartArray = [], element;
+let shoppingCartArray = [], element, localArray;
 
 ///VERIFICAR SI HAY ELEMENTOS EN LOCAL STORAGE AL INICIAR SESIÓN
-/*
-if(localStorage.getItem("shoppingCartContent")){
-    shoppingCartArray = JSON.parse(localStorage.getItem("shoppingCartContent"));
-    finalAmount = localStorage.getItem("finalAmount");
-    alert(shoppingCartArray);
-}
-*/
+ /*readLocalStorage();
+function readLocalStorage() {
+
+    localArray = localStorage.getItem("shoppingCartContent")
+    if (localArray === null) {
+        shoppingCartArray = [];
+    }
+    else {
+        shoppingCartArray = JSON.parse(localArray);
+    }
+       
+    updateShoppingCart();
+
+    const objArray = [];
+    Object.keys(shoppingCartArray).forEach(key => objArray.push(
+        shoppingCartArray[key]));
+    console.log(objArray);
+    shoppingCartArray = "";
+
+    shoppingCartArray = objArray;
+    updateShoppingCart();
+}*/
 /*CONSTRUCCION DE ELEMENTOS HTML - >>Asumimos que solo habrán Cuatro productos por Categoría, Seis Promociones<<*/
 
 for (i = 0; i < promoArray.length; i++) {
@@ -139,7 +154,7 @@ payButton.addEventListener("click", function () {
     finalModal.classList.remove("display-none");
 });
 confirmationButton.addEventListener("click", function () {
-    
+
     let user = userName.value, phone = userPhone.value, email = userEmail.value, adress = userAdress.value, card = userCard.value;
     if (user === "" || phone === "" || email === "" || adress === "" || card === "") {
         displayError("Favor Llenar Todos los Campos");
@@ -291,7 +306,6 @@ function updateShoppingCart() {
         });
     }
     localStorage.setItem("shoppingCartContent", JSON.stringify(shoppingCartArray));
-    localStorage.setItem("finalAmount", finalAmount);
 }
 
 function closeElement(toCloseElement) {
