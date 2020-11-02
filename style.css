@@ -534,9 +534,6 @@ footer {
     .home-description-div {
         width: 100%;
     }
-    .contact-element {
-        width: 90%;
-    }
     .viewer-element {
         height: min-content;
     }
@@ -558,6 +555,9 @@ footer {
     .shopping-cart-div {
         justify-content: center;
         width: 20%;
+    }
+    .contact-element {
+        width: 90%;
     }
     .home-section {
         padding: 50px 3% 20px;
