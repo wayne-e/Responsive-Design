@@ -1,6 +1,6 @@
 class Product {
     constructor(productId, productName, productDescription, productPrice, productImage) {
-        this._productId = productId;
+        this._id = productId;
         this._productName = productName;
         this._productDescription = productDescription;
         this._productPrice = productPrice;
@@ -8,7 +8,7 @@ class Product {
     }
 
     get id(){
-        return this._productId;
+        return this._id;
     }
 
     get name() {
@@ -29,7 +29,7 @@ class Product {
 
     createCatalogElement() {
         let htmlElement = `
-        <figure id="${this._productId}" class="flex product-element product-item">
+        <figure id="${this._id}" class="flex product-element product-item">
             <img src="${this._productImage}" alt="Producto" class="promo-image">
                 <figcaption class="product-description">
                     <h4>${this._productName}</h4>

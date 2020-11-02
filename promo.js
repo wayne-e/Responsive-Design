@@ -3,7 +3,7 @@ import { dessertsArray, drinksArray, foodsArray, Product } from './products.js';
 class Promotion extends Product {
     constructor(promoId, product1, product2, product3, promoName, promoImage) {
         super();
-        this._promoId = promoId;
+        this._id = promoId;
         this._promoName = promoName;
         this._promoElements = `${product1.name} + ${product2.name} + ${product3.name}`;
         this._promoDescription = `${product1.description} + ${product2.description} + ${product3.description}`;
@@ -14,7 +14,7 @@ class Promotion extends Product {
     }
 
     get id() {
-        return this._promoId;
+        return this._id;
     }
 
     get name() {
@@ -34,7 +34,7 @@ class Promotion extends Product {
     }
     createPromotionElement() {
         let htmlElement = `
-                <figure id="${this._promoId}" class="flex promo-figure product-item">
+                <figure id="${this._id}" class="flex promo-figure product-item">
                     <img src="${this._promoImage}" alt="${this._promoName}" class="promo-image">
                     <figcaption class="flex figcaption-description">
                         <h4 class="full-width">${this._promoName}</h4>
@@ -65,13 +65,13 @@ class Promotion extends Product {
 
 }
 
-let promo01 = new Promotion("promo01", foodsArray[0], drinksArray[0], dessertsArray[0], "Poder Olímpico", "img/combo01.jpg");
-let promo02 = new Promotion("promo02", foodsArray[0], foodsArray[2], drinksArray[1], "Combo Casual", "img/combo02.jpg");
-let promo03 = new Promotion("promo03", foodsArray[1], drinksArray[0], dessertsArray[0], "Tradicional Combo", "img/combo03.jpg");
-let promo04 = new Promotion("promo04", foodsArray[2], drinksArray[1], dessertsArray[0], "Golpeador Combo", "img/combo04.jpg");
-let promo05 = new Promotion("promo05", foodsArray[3], drinksArray[0], dessertsArray[0], "Combo Fresco", "img/combo05.jpg");
-let promo06 = new Promotion("promo06", foodsArray[3], drinksArray[1], dessertsArray[3], "Combo Jr", "img/combo06.jpg");
+const promo01 = new Promotion("promo01", foodsArray[0], drinksArray[0], dessertsArray[0], "Poder Olímpico", "img/combo01.jpg");
+const promo02 = new Promotion("promo02", foodsArray[0], foodsArray[2], drinksArray[1], "Combo Casual", "img/combo02.jpg");
+const promo03 = new Promotion("promo03", foodsArray[1], drinksArray[0], dessertsArray[0], "Tradicional Combo", "img/combo03.jpg");
+const promo04 = new Promotion("promo04", foodsArray[2], drinksArray[1], dessertsArray[0], "Golpeador Combo", "img/combo04.jpg");
+const promo05 = new Promotion("promo05", foodsArray[3], drinksArray[0], dessertsArray[0], "Combo Fresco", "img/combo05.jpg");
+const promo06 = new Promotion("promo06", foodsArray[3], drinksArray[1], dessertsArray[3], "Combo Jr", "img/combo06.jpg");
 
-let promoArray = [promo01, promo02, promo03, promo04, promo05, promo06];
+const promoArray = [promo01, promo02, promo03, promo04, promo05, promo06];
 
 export { promoArray, Promotion };

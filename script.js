@@ -1,6 +1,6 @@
 import { foodsArray, Product, drinksArray, dessertsArray } from './products.js';
 import { promoArray, Promotion } from './promo.js';
-
+import { Order } from './order.js';
 
 const sections = [...document.querySelectorAll('section')];
 const getLinkById = id => document.querySelector(`a[href='#${id}']`);
@@ -48,31 +48,44 @@ const errorMessage = document.getElementById("error-message");
 const errorDiv = document.getElementById("error-div");
 let amount = 1, i = 0, foodElements = "", drinkElements = "", dessertElement = "", promoElements = "";
 let productAmount = 4, selectedProduct, productPrice = 0, finalAmount = 0, currentTime, currentDate;
-let shoppingCartArray = [], element, localArray;
+let shoppingCartArray = [], element, ordersArray = [], orderId = 1, localContent, localArray = [];
 
 ///VERIFICAR SI HAY ELEMENTOS EN LOCAL STORAGE AL INICIAR SESIÓN
- /*readLocalStorage();
-function readLocalStorage() {
+/**/
+if (localStorage.getItem("shoppingCartContent")) {
+    localContent = JSON.parse(localStorage.getItem("shoppingCartContent"));
 
-    localArray = localStorage.getItem("shoppingCartContent")
-    if (localArray === null) {
-        shoppingCartArray = [];
+    for (const prop in localContent) {
+        localArray.push(localContent[prop]);
+        for (i = 0; i < promoArray.length; i++) {
+            if (localArray[prop]._id === promoArray[i].id) {
+                shoppingCartArray.push(promoArray[i]);
+                break;
+            }
+        }
+        for (i = 0; i < foodsArray.length; i++) {
+            if (localArray[prop]._id === foodsArray[i].id) {
+                shoppingCartArray.push(foodsArray[i]);
+                break;
+            }
+        }
+        for (i = 0; i < drinksArray.length; i++) {
+            if (localArray[prop]._id === drinksArray[i].id) {
+                shoppingCartArray.push(drinksArray[i]);
+                break;
+            }
+        }
+        for (i = 0; i < dessertsArray.length; i++) {
+            if (localArray[prop]._id === dessertsArray[i].id) {
+                shoppingCartArray.push(dessertsArray[i]);
+                break;
+            }
+        }
     }
-    else {
-        shoppingCartArray = JSON.parse(localArray);
-    }
-       
+    payButton.removeAttribute("disabled");
     updateShoppingCart();
+}
 
-    const objArray = [];
-    Object.keys(shoppingCartArray).forEach(key => objArray.push(
-        shoppingCartArray[key]));
-    console.log(objArray);
-    shoppingCartArray = "";
-
-    shoppingCartArray = objArray;
-    updateShoppingCart();
-}*/
 /*CONSTRUCCION DE ELEMENTOS HTML - >>Asumimos que solo habrán Cuatro productos por Categoría, Seis Promociones<<*/
 
 for (i = 0; i < promoArray.length; i++) {
@@ -153,8 +166,9 @@ shoppingCartIcon.addEventListener("click", function () {
 payButton.addEventListener("click", function () {
     finalModal.classList.remove("display-none");
 });
-confirmationButton.addEventListener("click", function () {
 
+//Boton Final
+confirmationButton.addEventListener("click", function () {
     let user = userName.value, phone = userPhone.value, email = userEmail.value, adress = userAdress.value, card = userCard.value;
     if (user === "" || phone === "" || email === "" || adress === "" || card === "") {
         displayError("Favor Llenar Todos los Campos");
@@ -192,6 +206,10 @@ confirmationButton.addEventListener("click", function () {
 
     currentTime = getCurrentTime();
     currentTimeSpan.innerText = currentTime;
+
+    let order = new Order(orderId, shoppingCartArray, finalAmount, user, phone, email, adress, card, currentTime);
+    ordersArray.push(order);
+    localStorage.setItem("ordersArray", JSON.stringify(ordersArray));
     confirmatonDiv.classList.remove("display-none");
     shoppingCartDiv.classList.add("display-none");
     finalModal.classList.add("display-none");
@@ -199,7 +217,7 @@ confirmationButton.addEventListener("click", function () {
     setTimeout(function () {
         confirmatonDiv.classList.add("display-none");
     }, 2500);
-
+    orderId++;
 });
 
 
