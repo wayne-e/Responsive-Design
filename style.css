@@ -65,12 +65,12 @@ a {
     cursor: pointer;
 }
 
-.fas:hover, .fab:hover {
-    color: wheat;
-}
-
 .fa-times-circle, .fa-window-close {
     color: brown;
+}
+
+.fa-times-circle:hover, .fa-window-close:hover, .fas:hover, .fab:hover {
+    color: rgb(194, 94, 94);
 }
 
 .bold-span {
