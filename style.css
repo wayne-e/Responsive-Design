@@ -303,22 +303,20 @@ section {
     border: solid 2px wheat;
 }
 
+.contactus-section {
+    justify-content: center;
+}
+
 .contact-element {
     justify-content: center;
-    width: 40%;
-    margin: 20px auto 0;
-    padding: 10px;
+    width: 45%;
+    height: min-content;
 }
 
-.comments-description {
-    padding: 20px 0;
-    background-color: rgb(189, 63, 63, 0.4);
+.contact-image {
+    width: 80%;
+    margin: 10px;
     border-radius: 15px;
-}
-
-.comments-description-element {
-    width: 50%;
-    padding: 10px;
 }
 
 .form-class {
@@ -357,7 +355,7 @@ section {
     border: solid 2px brown;
 }
 
-.submit-button:disabled{
+.submit-button:disabled {
     opacity: 0.2;
     cursor: default;
 }
@@ -539,9 +537,6 @@ footer {
     .contact-element {
         width: 90%;
     }
-    .comments-description-element {
-        width: 90%;
-    }
     .viewer-element {
         height: min-content;
     }
@@ -598,7 +593,7 @@ footer {
     .final-modal-div {
         width: 90%;
     }
-    .order-placed-div{
+    .order-placed-div {
         width: 100%;
     }
 }
