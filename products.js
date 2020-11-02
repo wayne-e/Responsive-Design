@@ -1,9 +1,8 @@
 class Product {
-    constructor(productId, productName, productDescription, productDetails, productPrice, productImage) {
+    constructor(productId, productName, productDescription, productPrice, productImage) {
         this._productId = productId;
         this._productName = productName;
         this._productDescription = productDescription;
-        this._productDetails = productDetails;
         this._productPrice = productPrice;
         this._productImage = productImage;
     }
@@ -18,10 +17,6 @@ class Product {
 
     get description() {
         return this._productDescription
-    }
-
-    get productDetails() {
-        return this._productDetails
     }
 
     get price() {
@@ -66,29 +61,29 @@ class Product {
 
 //Comidas
 
-const food1 = new Product("food01", "Hamburguesa Olímpica", "La especialidad de la Casa, hamburguesa con 3 majestuosas capas de todos sus ingrediientes", "Pan tradicional, Carne, Queso, Aderesos, Vegetales", 5, "img/hamburguesa-olimpica.jpg");
-const food2 = new Product("food02", "Adorador Hamburguesa", "Tradicional hamburguesa prepara para satisfacer el hambre de un solo golpe", "Pan tradicional, Carne, Queso, Aderesos", 2, "img/adorador.jpg");
-const food3 = new Product("food03", "Papas Legendarias", "Ordena nuestras papas fritas al fuego de los dioses preparadas al instante", "Papa tradicional frita en aceites, sazonadas con sal y pimienta", 1.5, "img/papas.jpg");
-const food4 = new Product("food04", "Inmortal HotDog", "Delicioso HotDog cargado de sabor hasta el último bocado", "Pan tradicional, Pasta vegetal, salchicha especial y aderesos", 1.5, "img/hotdog.jpg");
+const food1 = new Product("food01", "Hamburguesa Olímpica", "Hamburguesa con 3 capas de todos sus Ingredientes", 5, "img/hamburguesa-olimpica.jpg");
+const food2 = new Product("food02", "Adorador Hamburguesa", "Hamburguesa tradicional con una capa de Ingredientes", 2, "img/adorador.jpg");
+const food3 = new Product("food03", "Papas Legendarias", "Papas fritas salteadas", 1.5, "img/papas.jpg");
+const food4 = new Product("food04", "Inmortal HotDog", "Hotdog con doble Queso", 1.5, "img/hotdog.jpg");
 
 const foodsArray = [food1, food2, food3, food4];
 
 
 //Bebidas
 
-const drink1 = new Product("drink01", "Café Minotauro", "Delicioso café disponible a toda hora del día para los amantes de esta poderosa bebida", "Cafe negro tradicional", 1, "img/cafe.jpg");
-const drink2 = new Product("drink02", "Cítrico Mitológico", "Bebida mezcla de cítricos para saciar tu sed desde el primer sorbo", "Bebida Natural en base a naranja, limón, mandarina y azúcares", 1, "img/limonada.jpg");
-const drink3 = new Product("drink03", "Té de los dioses", "Bebida caliente y relajante, económica y cargada en sabor", "Mezcla de Té de manzanilla, Canela y Hierba Buena", 1, "img/te.jpg");
-const drink4 = new Product("drink04", "Malteada Especial", "Deliciosa malteada de Chocolate con café y leche, una combinación salida del mismísimo Olimpo", "Chocolate, Café, Leche y Azúcares", 1.5, "img/malteada.jpg");
+const drink1 = new Product("drink01", "Café Minotauro", "Cafe negro doble", 1, "img/cafe.jpg");
+const drink2 = new Product("drink02", "Cítrico Mitológico", "Bebida de cítricos", 1, "img/limonada.jpg");
+const drink3 = new Product("drink03", "Té de los dioses", "Té caliente de Manzana y Canela", 1, "img/te.jpg");
+const drink4 = new Product("drink04", "Malteada Especial", "Malteada de Chocolate", 1.5, "img/malteada.jpg");
 
 const drinksArray = [drink1, drink2, drink3, drink4];
 
 //Postres
 
-const dessert1 = new Product("dessert01", "Muffin Encantado", "Prueba el maravilloso sabor del Muffin de vainilla con trozos de fruta", "Trozos de Fresa, Piña y Manzana, Azúcares y Vainilla", 1, "img/muffin.jpg");
-const dessert2 = new Product("dessert02", "Tres Leches Celestial", "Soprende a tu paladar con el mejor Tres Leches de toda la zona", "Preparado con Pan, Leche de diversos tipos y azúcar", 1.5, "img/tresleches.jpg");
-const dessert3 = new Product("dessert03", "Flan de Nubes", "Prueba la textura especial de nuestro Flan de Vainilla, como estar en las nubes", "Receta artesanal de flan, Vainilla y Leche", 1, "img/flan.jpg");
-const dessert4 = new Product("dessert04", "CheeseCake Electrizante", "Deleitate con el postre Favorito de todo el Olimpo, el CheeseCake con fresa", "Pastel en base a Leches, Quesos y Fresa", 2, "img/cheesecake.jpg");
+const dessert1 = new Product("dessert01", "Muffin Encantado", "Muffin de Vainilla con Pasas", 1, "img/muffin.jpg");
+const dessert2 = new Product("dessert02", "Tres Leches Celestial", "Tres Leches tradicional", 1.5, "img/tresleches.jpg");
+const dessert3 = new Product("dessert03", "Flan de Nubes", "Flan suave de Vainilla", 1, "img/flan.jpg");
+const dessert4 = new Product("dessert04", "CheeseCake Electrizante", "Cheesecake con Fresa", 2, "img/cheesecake.jpg");
 
 const dessertsArray = [dessert1, dessert2, dessert3, dessert4];
 
